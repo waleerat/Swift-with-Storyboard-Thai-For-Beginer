@@ -1,0 +1,5 @@
+${PODS_ROOT}/Target Support Files/Pods-Thai-For-Beginer/Pods-Thai-For-Beginer-frameworks.sh
+${BUILT_PRODUCTS_DIR}/PopBounceButton/PopBounceButton.framework
+${BUILT_PRODUCTS_DIR}/SCLAlertView/SCLAlertView.framework
+${BUILT_PRODUCTS_DIR}/Shuffle-iOS/Shuffle_iOS.framework
+${BUILT_PRODUCTS_DIR}/pop/pop.framework
