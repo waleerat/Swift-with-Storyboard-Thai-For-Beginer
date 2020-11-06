@@ -8,39 +8,51 @@
 import UIKit
 
 class ShowAllCardViewController: UIViewController {
- 
-        struct Continent {
-            static let name = ["Asia", "Africa", "North America", "South America", "Antarctica", "Europe"]
-        }
-    private var cardModels = [AlphabetsCardModel]()
     
+    @IBOutlet weak var headerLabel: UILabel!
+    @IBOutlet weak var homeBnt: UIButton!
     
+    var quizType: String!
+    private var cardModels: [[String:String]] = []
         var selectedItem: Any?
-        override func viewDidLoad() {
-            super.viewDidLoad()
-            navigationItem.title = "Continent"
-            // Do any additional setup after loading the view.
-        }
+      
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        loadAlphabetsCard()
+        // Do any additional setup after loading the view.
+        setTheme()
+     }
+    
+     
+    @IBAction func goBackToMenu(_ sender: UIButton) {
+        
+        GlobalFunction().goBackToMenu(quizType: quizType)
+    }
     
     
      func loadAlphabetsCard(){
-        var count: Int = 0
-        for (item) in AlphabetRows {
-            count += 1
-            cardModels.append(AlphabetsCardModel(
-                                orderNumber: count,
-                                        code: item[0],
-                                        cardName: item[0],
-                                        audioFileName: "\(item[0]).mp3",
-                                        symbol: item[1],
-                                        thaiName: item[2],
-                                        RTGSName: item[3],
-                                        meaning: item[4],
-                                        RTGSStartSound: item[5],
-                                        RTGSEndSound: item[6],
-                                        PIAStartSound: item[7],
-                                        PIAEndSound: item[8]))
+        if (quizType == "Alphabet") {
+            for (item) in AlphabetRows {
+                cardModels.append(
+                [
+                    "quizType" : quizType,
+                    "code": item[0],
+                    "thaiName": item[2]
+                ]
+                )
+            }
+        } else {
+            for (item) in vowelRows {
+                cardModels.append(
+                [
+                    "quizType" : quizType,
+                    "code": item[0],
+                    "nameInThai": item[1]
+                ]
+                )
+            }
         }
+        
     }
     }
 
@@ -48,28 +60,30 @@ class ShowAllCardViewController: UIViewController {
     extension ShowAllCardViewController : UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
         
         func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+            
             return cardModels.count  // form Models/filebase/country.swift
         }
         
         func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath)   //as! ContinentCollectionViewCell
-          //  cell.continentLabel.text = Continent.name[indexPath.row]
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! ShowAllCardCollectionViewCell
+            //cell.continentLabel.text = cardModels[indexPath.row]["code"]
+            cell.setCollection(cardModel: cardModels[indexPath.row])
             return cell
         }
         
         func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-            return CGSize(width: collectionView.frame.width/2.1, height: collectionView.frame.height/5)
+            return CGSize(width: collectionView.frame.width/2.05, height: collectionView.frame.height/3)
         }
         
-        func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-            self.selectedItem = Continent.name[indexPath.row]
-           // performSegue(withIdentifier: "seguGotoContryScreen", sender: self)
+        private func setTheme(){
+            if (quizType == "Alphabet") {
+                headerLabel.text = textLib.AlphabetListAllScreen.headerLabel
+                homeBnt.setImage(UIImage(named: "icon-alphabet"), for: .normal)
+            } else {
+                headerLabel.text = textLib.VowelListAllScreen.headerLabel
+                homeBnt.setImage(UIImage(named: "icon-vowel"), for: .normal)
+            }
         }
-       
-//        override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//            let countryVC = segue.destination as! CountryViewController
-//            countryVC.selectedContinent = (selectedItem!) as? String
-//        }
         
     }
 

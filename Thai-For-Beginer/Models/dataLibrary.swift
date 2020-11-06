@@ -5,8 +5,57 @@
 //  Created by Waleerat Gottlieb on 2020-10-31.
 //
 
-import Foundation 
+import Foundation
+
 var AlphabetRows = [
+   ["001" ,"ก","ก ไก่","ko kai","chicken","k","k","[k]","[k̚]","mid"],
+   ["002" ,"ข","ข ไข่","kho khai","egg","kh","k","[kʰ]","[k̚]","high"],
+   ["003" ,"ฃ","ฃ ขวด","kho khuat","bottle (obsolete)","kh","k","[kʰ]","[k̚]","high"],
+   ["004" ,"ค","ค ควาย","kho khwai","buffalo","kh","k","[kʰ]","[k̚]","low"],
+   ["005" ,"ฅ","ฅ คน","kho khon","person (obsolete)","kh","k","[kʰ]","[k̚]","low"],
+   ["006" ,"ฆ","ฆ ระฆัง","kho ra-khang","bell","kh","k","[kʰ]","[k̚]","low"],
+   ["007" ,"ง","ง งู","ngo ngu","snake","ng","ng","[ŋ]","[ŋ]","low"],
+   ["008" ,"จ","จ จาน","cho chan","plate","ch","t","[tɕ]","[t̚]","mid"],
+   ["009" ,"ฉ","ฉ ฉิ่ง","cho ching","cymbals","ch"," –","[tɕʰ]","–","high"],
+   ["010" ,"ช","ช ช้าง","cho chang","elephant","ch","t","[tɕʰ]","[t̚]","low"],
+   ["011" ,"ซ","ซ โซ่","so so","chain","s","t","[s]","[t̚]","low"],
+   ["012" ,"ฌ","ฌ เฌอ","cho choe","tree","ch"," –","[tɕʰ]","–","low"],
+   ["013" ,"ญ[a]","ญ หญิง","yo ying","woman","y","n","[j]","[n]","low"],
+   ["014" ,"ฎ","ฎ ชฎา","do cha-da","headdress","d","t","[d]","[t̚]","mid"],
+   ["015" ,"ฏ","ฏ ปฏัก","to pa-tak","goad, javelin","t","t","[t]","[t̚]","mid"],
+   ["016" ,"ฐ[b]","ฐ ฐาน","tho than","pedestal","th","t","[tʰ]","[t̚]","high"],
+   ["017" ,"ฑ","ฑ มณโฑ","tho montho","Montho, character from Ramayana","th or d","[tʰ] or [d]","[t̚]","low"],
+   ["018" ,"ฒ","ฒ ผู้เฒ่า","tho phu-thao","elder","th","t","[tʰ]","[t̚]","low"],
+   ["019" ,"ณ","ณ เณร","no nen","samanera","n","n","[n]","[n]","low"],
+   ["020" ,"ด","ด เด็ก","do dek","child","d","t","[d]","[t̚]","mid"],
+   ["021" ,"ต","ต เต่า","to tao","turtle","t","t","[t]","[t̚]","mid"],
+   ["022" ,"ถ","ถ ถุง","tho thung","sack","th","t","[tʰ]","[t̚]","high"],
+   ["023" ,"ท","ท ทหาร","tho thahan","soldier","th","t","[tʰ]","[t̚]","low"],
+   ["024" ,"ธ","ธ ธง","tho thong","flag","th","t","[tʰ]","[t̚]","low"],
+   ["025" ,"น","น หนู","no nu","mouse","n","n","[n]","[n]","low"],
+   ["026" ,"บ","บ ใบไม้","bo baimai","leaf","b","p","[b]","[p̚]","mid"],
+   ["027" ,"ป","ป ปลา","po pla","fish","p","p","[p]","[p̚]","mid"],
+   ["028" ,"ผ","ผ ผึ้ง","pho phueng","bee","ph"," –","[pʰ]","–","high"],
+   ["029" ,"ฝ","ฝ ฝา","fo fa","lid","f"," –","[f]","–","high"],
+   ["030" ,"พ","พ พาน","pho phan","phan","ph","p","[pʰ]","[p̚]","low"],
+   ["031" ,"ฟ","ฟ ฟัน","fo fan","teeth","f","p","[f]","[p̚]","low"],
+   ["032" ,"ภ","ภ สำเภา","pho sam-phao","junk","ph","p","[pʰ]","[p̚]","low"],
+   ["033" ,"ม","ม ม้า","mo ma","horse","m","m","[m]","[m]","low"],
+   ["034" ,"ย","ย ยักษ์","yo yak","giant, yaksha","y","n[c]","[j]","[n]","low"],
+   ["035" ,"ร","ร เรือ","ro ruea","boat","r","n","[r]","[n]","low"],
+   ["036" ,"ล","ล ลิง","lo ling","monkey","l","n","[l]","[n]","low"],
+   ["037" ,"ว","ว แหวน","wo waen","ring","w","–[d]","[w]","–","low"],
+   ["038" ,"ศ","ศ ศาลา","so sala","pavilion, sala","s","t","[s]","[t̚]","high"],
+   ["039" ,"ษ","ษ ฤๅษี","so rue-si","hermit","s","t","[s]","[t̚]","high"],
+   ["040" ,"ส","ส เสือ","so suea","tiger","s","t","[s]","[t̚]","high"],
+   ["041" ,"ห","ห หีบ","ho hip","chest, box","h","–","[h]","–","high"],
+   ["042" ,"ฬ","ฬ จุฬา","lo chu-la","kite","l","n","[l]","[n]","low"],
+   ["043" ,"อ","อ อ่าง","o ang","basin","–[e]"," –","[ʔ]","–","mid"],
+   ["044" ,"ฮ","ฮ นกฮูก","ho nok-huk","owl","h"," –","[h]","–","low"],
+]
+
+
+var AlphabetRows01 = [
    ["0101" ,"ก","ก ไก่","ko kai","chicken","k","k","[k]","[k̚]","mid"],
    ["0202" ,"ข","ข ไข่","kho khai","egg","kh","k","[kʰ]","[k̚]","high"],
    ["0203" ,"ฃ","ฃ ขวด","kho khuat","bottle (obsolete)","kh","k","[kʰ]","[k̚]","high"],

@@ -230,18 +230,18 @@ class QuizViewController: UIViewController {
     private func setTheme(){
         if let quizType = quizType {
             if quizType == "Alphabet" {
-                homeBnt.setImage(UIImage(named: "icon-home-orange"), for: .normal)
+                homeBnt.setImage(UIImage(named: "icon-alphabet"), for: .normal)
                 navigationItem.title = textLib.AlphabetQuizScreen.navigationTitle
                 headerLabel.text = textLib.AlphabetQuizScreen.headerLabel
                 parentView.backgroundColor = textLib.AlphabetQuizScreen.parentViewBackground
             } else {
-                homeBnt.setImage(UIImage(named: "icon-home-violet"), for: .normal)
+                homeBnt.setImage(UIImage(named: "icon-vowel"), for: .normal)
                 navigationItem.title = textLib.vowelScreen.navigationTitle
                 headerLabel.text = textLib.vowelScreen.headerLabel
                 parentView.backgroundColor = textLib.vowelScreen.parentViewBackground
             }
         } else {
-            homeBnt.setImage(UIImage(named: "icon-home-orange"), for: .normal)
+            homeBnt.setImage(UIImage(named: "icon-alphabet"), for: .normal)
             navigationItem.title = textLib.AlphabetQuizScreen.navigationTitle
             headerLabel.text = textLib.AlphabetQuizScreen.headerLabel
             parentView.backgroundColor = textLib.AlphabetQuizScreen.parentViewBackground

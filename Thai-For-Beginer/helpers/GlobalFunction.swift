@@ -31,7 +31,7 @@ class GlobalFunction {
         Bnt.backgroundColor = .clear
         Bnt.layer.cornerRadius = 10
         Bnt.layer.borderWidth = 7
-        Bnt.layer.borderColor = #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1).cgColor
+        Bnt.layer.borderColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1).cgColor
     }
     
     func setButtonBoderCorrect(Bnt: UIButton) {
@@ -44,7 +44,7 @@ class GlobalFunction {
     
     func setCornerRadius(Bnt: UIButton, cornerRaddius: Int) {
         Bnt.clipsToBounds = true
-        Bnt.layer.cornerRadius = CGFloat(20)
+        Bnt.layer.cornerRadius = CGFloat(cornerRaddius)
     }
     
     func setMenuButtonCornerRadius(Bnt: UIButton) {
@@ -79,6 +79,14 @@ class GlobalFunction {
         alertView.showInfo("Your Score", subTitle: "\(score) from \(kMaxQuiz)")
     }
     
+    func goBackToMenu(quizType:String){
+        if (quizType == "Alphabet") {
+            gotoStoryboard(storyboard : "Main", identifier : "AlphabetMenuVC")
+        } else {
+            gotoStoryboard(storyboard : "Main", identifier : "VowelMenuVC")
+        }
+    }
+    
     func gotoStoryboard(storyboard : String, identifier : String){
         let story = UIStoryboard(name: storyboard, bundle:nil)
         let vc = story.instantiateViewController(withIdentifier: identifier)
@@ -96,7 +104,17 @@ class GlobalFunction {
         vc.quizType = quizType
         if kIsNavigationVC {
             vc.hidesBottomBarWhenPushed = kHidesBottomBar
-            //navigationController?.pushViewController(vc, animated: true)
+        }else {
+            UIApplication.shared.windows.first?.rootViewController = vc
+        }
+    }
+    
+    func gotoAllCardStoryboard(quizType: String){
+        let story = UIStoryboard(name: "Main", bundle:nil)
+        let vc = story.instantiateViewController(withIdentifier: "ShowAllCardVC") as! ShowAllCardViewController
+        vc.quizType = quizType
+        if kIsNavigationVC {
+            vc.hidesBottomBarWhenPushed = kHidesBottomBar
         }else {
             UIApplication.shared.windows.first?.rootViewController = vc
         }

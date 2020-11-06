@@ -16,11 +16,12 @@ public let kButtonCornerRaddius = 20
 public let kHidesBottomBar = true
 public let kIsNavigationVC = false
 
-public let kPrimaryColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
-public let kAlphabetColor = #colorLiteral(red: 0.918459475, green: 0.6915696263, blue: 0.5719199777, alpha: 0.9991455078)
-public let kVowelColor = #colorLiteral(red: 0.827039659, green: 0.7227360606, blue: 0.9373013377, alpha: 1)
-public let kSettingColor = #colorLiteral(red: 0.2588235438, green: 0.7568627596, blue: 0.9686274529, alpha: 1)
-public let kQuizBntColor = #colorLiteral(red: 0.9098039269, green: 0.4784313738, blue: 0.6431372762, alpha: 1)
+public let kPrimaryColor = #colorLiteral(red: 0.831372549, green: 0.8784313725, blue: 0.6078431373, alpha: 1)
+public let kAlphabetColor = #colorLiteral(red: 0.6549019608, green: 0.7882352941, blue: 0.3411764706, alpha: 1)
+public let kVowelColor = #colorLiteral(red: 0.6549019608, green: 0.7882352941, blue: 0.3411764706, alpha: 1)
+public let kSettingColor = #colorLiteral(red: 0.6549019608, green: 0.7882352941, blue: 0.3411764706, alpha: 1)
+public let kQuizBntColor = #colorLiteral(red: 0.6274509804, green: 0.8078431373, blue: 0.8509803922, alpha: 1)
+public let kAllCardsBntColor = #colorLiteral(red: 0.4666666687, green: 0.7647058964, blue: 0.2666666806, alpha: 1)
 
 struct textLib {
     struct homeScreen {
@@ -34,7 +35,7 @@ struct textLib {
     
     struct alphabetScreen {
         static let navigationTitle = "Alphabet"
-        static let parentViewBackground = kAlphabetColor
+        static let parentViewBackground = kPrimaryColor
         static let headerLabel = "Alphabet"
         static let learnBntTitle = "Flash Card"
         static let showAllBntTitle = "All Alphabets"
@@ -43,16 +44,16 @@ struct textLib {
     
     struct vowelScreen {
         static let navigationTitle = "Vowel"
-        static let parentViewBackground = kVowelColor
+        static let parentViewBackground = kPrimaryColor
         static let headerLabel = "Vowel"
         static let learnBntTitle = "Flash Card"
         static let showAllBntTitle = "All Volels"
-        static let quizBntTitle = "Test"
+        static let quizBntTitle = "Quiz"
     }
     
     struct settingScreen {
         static let navigationTitle = "Setting"
-        static let parentViewBackground = kSettingColor
+        static let parentViewBackground = kPrimaryColor
         static let headerLabel = "Setting"
         static let alphabetSoundLabel = "Alphabet Sound"
         static let vowelSoundLabel = "Vowel Sound"
@@ -63,13 +64,21 @@ struct textLib {
     struct AlphabetQuizScreen {
         static let navigationTitle = "Alphabet Quiz"
         static let headerLabel = "Alphabet Quiz"
-        static let parentViewBackground = kAlphabetColor
+        static let parentViewBackground = kPrimaryColor
     }
     
     struct VowelQuizScreen {
         static let navigationTitle = "Vowel Quiz"
         static let headerLabel = "Vowel Quiz"
-        static let parentViewBackground = kVowelColor
+        static let parentViewBackground = kPrimaryColor
+    }
+    
+    struct AlphabetListAllScreen {
+        static let headerLabel = "44 Thai Alphabets"
+    }
+    
+    struct VowelListAllScreen {
+        static let headerLabel = "32 Thai Vowels"
     }
 }
 

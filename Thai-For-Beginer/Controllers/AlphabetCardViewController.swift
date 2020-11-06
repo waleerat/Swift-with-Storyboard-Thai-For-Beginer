@@ -119,7 +119,7 @@ extension AlphabetCardViewController: ButtonStackViewDelegate, SwipeCardStackDat
         let card = SwipeCard()
         card.footerHeight = 80
         //card.swipeDirections = [.left, .up, .right]
-        card.swipeDirections = [.left,.right]
+        card.swipeDirections = [.right]
         for direction in card.swipeDirections {
             card.setOverlay(SwipeCardOverlay(direction: direction), forDirection: direction)
         }
@@ -142,8 +142,6 @@ extension AlphabetCardViewController: ButtonStackViewDelegate, SwipeCardStackDat
     }
 
     func cardStack(_ cardStack: SwipeCardStack, didUndoCardAt index: Int, from direction: SwipeDirection) {
-        //Replay
-        print("Replay")
         if (cardModels.count > index) {
             PlaySound(currentPlay: cardModels[index].code)
         }
@@ -157,11 +155,12 @@ extension AlphabetCardViewController: ButtonStackViewDelegate, SwipeCardStackDat
                 PlaySound(currentPlay: cardModels[index+1].code)
             }
         }
-        else if direction == .left {
-            if (0 <= index-1) {
-                self.cardStack(cardStack, didUndoCardAt: index-1, from: direction)
-            }
-        }
+//        else if direction == .left {
+//            if (0 <= index-1) {
+//                self.cardStack(cardStack, didUndoCardAt: index-1, from: direction)
+//            }
+//        }
+         
         
     }
 
@@ -205,7 +204,7 @@ extension AlphabetCardViewController: ButtonStackViewDelegate, SwipeCardStackDat
     
     private func playFirstAlphabet() {
         Timer.scheduledTimer(withTimeInterval: kPlaySoundDelay , repeats: false) { (timer) in
-            self.PlaySound(currentPlay: "0101")
+            self.PlaySound(currentPlay: "001")
         }
     } 
     
