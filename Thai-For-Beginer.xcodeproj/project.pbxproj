@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2384D9417BF6FBA844AC3D2D /* Pods_Thai_For_Beginer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE029C78ABD6ED608B550C7B /* Pods_Thai_For_Beginer.framework */; };
 		AB4057E52553FBC700C03C1E /* ShowAllCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB4057E42553FBC600C03C1E /* ShowAllCardViewController.swift */; };
 		AB4057EC2553FCD700C03C1E /* ShowAllCardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB4057EB2553FCD700C03C1E /* ShowAllCardCollectionViewCell.swift */; };
 		AB4057F62554707200C03C1E /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB4057F52554707100C03C1E /* TestViewController.swift */; };
@@ -141,12 +142,11 @@
 		AB4C2E1825522B9E001CE842 /* AlphabetMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB4C2E1725522B9E001CE842 /* AlphabetMenuViewController.swift */; };
 		AB4C2E1B25522BBF001CE842 /* VowelMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB4C2E1A25522BBF001CE842 /* VowelMenuViewController.swift */; };
 		AB4C2E1E2552B281001CE842 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB4C2E1D2552B280001CE842 /* SettingViewController.swift */; };
-		E37A6839345253D52A8F4354 /* Pods_Thai_For_Beginer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 671FBB145AB24DF0555EE187 /* Pods_Thai_For_Beginer.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		671FBB145AB24DF0555EE187 /* Pods_Thai_For_Beginer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Thai_For_Beginer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		80DEA38A933329E4A20B499D /* Pods-Thai-For-Beginer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Thai-For-Beginer.release.xcconfig"; path = "Target Support Files/Pods-Thai-For-Beginer/Pods-Thai-For-Beginer.release.xcconfig"; sourceTree = "<group>"; };
+		5845E92D0F3A8C0D4F409D42 /* Pods-Thai-For-Beginer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Thai-For-Beginer.debug.xcconfig"; path = "Target Support Files/Pods-Thai-For-Beginer/Pods-Thai-For-Beginer.debug.xcconfig"; sourceTree = "<group>"; };
+		AB0DC55E2559F3A2008C437A /* Thai-For-BeginerRelease.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Thai-For-BeginerRelease.entitlements"; sourceTree = "<group>"; };
 		AB4057E42553FBC600C03C1E /* ShowAllCardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowAllCardViewController.swift; sourceTree = "<group>"; };
 		AB4057EB2553FCD700C03C1E /* ShowAllCardCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowAllCardCollectionViewCell.swift; sourceTree = "<group>"; };
 		AB4057F52554707100C03C1E /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
@@ -283,7 +283,10 @@
 		AB4C2E1725522B9E001CE842 /* AlphabetMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlphabetMenuViewController.swift; sourceTree = "<group>"; };
 		AB4C2E1A25522BBF001CE842 /* VowelMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VowelMenuViewController.swift; sourceTree = "<group>"; };
 		AB4C2E1D2552B280001CE842 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
-		B8A53892B7CBAB50C55AE002 /* Pods-Thai-For-Beginer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Thai-For-Beginer.debug.xcconfig"; path = "Target Support Files/Pods-Thai-For-Beginer/Pods-Thai-For-Beginer.debug.xcconfig"; sourceTree = "<group>"; };
+		AB6CD42E255A8ECB0068AFF9 /* distribution.cer */ = {isa = PBXFileReference; lastKnownFileType = file; path = distribution.cer; sourceTree = "<group>"; };
+		AB6CD42F255A8EE00068AFF9 /* development.cer */ = {isa = PBXFileReference; lastKnownFileType = file; name = development.cer; path = ../../../../../Downloads/development.cer; sourceTree = "<group>"; };
+		F89DBCB084B87B0D522D622A /* Pods-Thai-For-Beginer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Thai-For-Beginer.release.xcconfig"; path = "Target Support Files/Pods-Thai-For-Beginer/Pods-Thai-For-Beginer.release.xcconfig"; sourceTree = "<group>"; };
+		FE029C78ABD6ED608B550C7B /* Pods_Thai_For_Beginer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Thai_For_Beginer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -291,28 +294,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E37A6839345253D52A8F4354 /* Pods_Thai_For_Beginer.framework in Frameworks */,
+				2384D9417BF6FBA844AC3D2D /* Pods_Thai_For_Beginer.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5E132601A72E28E40F358411 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FE029C78ABD6ED608B550C7B /* Pods_Thai_For_Beginer.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		6712016734DCBACF9BCA9FF8 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				B8A53892B7CBAB50C55AE002 /* Pods-Thai-For-Beginer.debug.xcconfig */,
-				80DEA38A933329E4A20B499D /* Pods-Thai-For-Beginer.release.xcconfig */,
+				5845E92D0F3A8C0D4F409D42 /* Pods-Thai-For-Beginer.debug.xcconfig */,
+				F89DBCB084B87B0D522D622A /* Pods-Thai-For-Beginer.release.xcconfig */,
 			);
 			path = Pods;
-			sourceTree = "<group>";
-		};
-		A7E09A836B9B4143681DD77A /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				671FBB145AB24DF0555EE187 /* Pods_Thai_For_Beginer.framework */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		AB4C2C59254DEE75001CE842 = {
@@ -321,7 +324,7 @@
 				AB4C2C64254DEE75001CE842 /* Thai-For-Beginer */,
 				AB4C2C63254DEE75001CE842 /* Products */,
 				6712016734DCBACF9BCA9FF8 /* Pods */,
-				A7E09A836B9B4143681DD77A /* Frameworks */,
+				5E132601A72E28E40F358411 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -336,6 +339,7 @@
 		AB4C2C64254DEE75001CE842 /* Thai-For-Beginer */ = {
 			isa = PBXGroup;
 			children = (
+				AB0DC55E2559F3A2008C437A /* Thai-For-BeginerRelease.entitlements */,
 				AB4C2DF82551D715001CE842 /* _Temp */,
 				AB4C2D04254F4DE0001CE842 /* Models */,
 				AB4C2D3F254FF98D001CE842 /* Views */,
@@ -344,6 +348,8 @@
 				AB4C2C7A254DF12A001CE842 /* Constants */,
 				AB4C2C67254DEE75001CE842 /* SceneDelegate.swift */,
 				AB4C2C65254DEE75001CE842 /* AppDelegate.swift */,
+				AB6CD42F255A8EE00068AFF9 /* development.cer */,
+				AB6CD42E255A8ECB0068AFF9 /* distribution.cer */,
 				AB4C2C6E254DEE78001CE842 /* Assets.xcassets */,
 				AB4C2C73254DEE78001CE842 /* Info.plist */,
 				AB4C2C81254F21AA001CE842 /* Sounds */,
@@ -594,11 +600,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AB4C2C76254DEE78001CE842 /* Build configuration list for PBXNativeTarget "Thai-For-Beginer" */;
 			buildPhases = (
-				0D50E2C8CCB15C44E293D8F9 /* [CP] Check Pods Manifest.lock */,
+				9DCA338F3415A23FFBD55B9B /* [CP] Check Pods Manifest.lock */,
 				AB4C2C5E254DEE75001CE842 /* Sources */,
 				AB4C2C5F254DEE75001CE842 /* Frameworks */,
 				AB4C2C60254DEE75001CE842 /* Resources */,
-				299F5DFCA9FFE2F79617BC39 /* [CP] Embed Pods Frameworks */,
+				A3A023935D2E656F379FDFD8 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -756,7 +762,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		0D50E2C8CCB15C44E293D8F9 /* [CP] Check Pods Manifest.lock */ = {
+		9DCA338F3415A23FFBD55B9B /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -778,7 +784,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		299F5DFCA9FFE2F79617BC39 /* [CP] Embed Pods Frameworks */ = {
+		A3A023935D2E656F379FDFD8 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -975,41 +981,48 @@
 		};
 		AB4C2C77254DEE78001CE842 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B8A53892B7CBAB50C55AE002 /* Pods-Thai-For-Beginer.debug.xcconfig */;
+			baseConfigurationReference = 5845E92D0F3A8C0D4F409D42 /* Pods-Thai-For-Beginer.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ZD74G4QNW2;
 				INFOPLIST_FILE = "Thai-For-Beginer/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.wgoweb.Thai-For-Beginer";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
 		AB4C2C78254DEE78001CE842 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 80DEA38A933329E4A20B499D /* Pods-Thai-For-Beginer.release.xcconfig */;
+			baseConfigurationReference = F89DBCB084B87B0D522D622A /* Pods-Thai-For-Beginer.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Thai-For-Beginer/Thai-For-BeginerRelease.entitlements";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ZD74G4QNW2;
 				INFOPLIST_FILE = "Thai-For-Beginer/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.wgoweb.Thai-For-Beginer";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

@@ -245,7 +245,9 @@ class QuizViewController: UIViewController {
             navigationItem.title = textLib.AlphabetQuizScreen.navigationTitle
             headerLabel.text = textLib.AlphabetQuizScreen.headerLabel
             parentView.backgroundColor = textLib.AlphabetQuizScreen.parentViewBackground
-        } 
+        }
+        headerLabel.textColor = kHeaderLabelColor
+         
         
     }
         

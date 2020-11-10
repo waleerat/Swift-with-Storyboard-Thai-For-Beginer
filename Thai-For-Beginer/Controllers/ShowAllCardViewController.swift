@@ -9,8 +9,10 @@ import UIKit
 
 class ShowAllCardViewController: UIViewController {
     
+    @IBOutlet var parentView: UIView!
     @IBOutlet weak var headerLabel: UILabel!
     @IBOutlet weak var homeBnt: UIButton!
+    @IBOutlet weak var collectionView: UICollectionView!
     
     var quizType: String!
     private var cardModels: [[String:String]] = []
@@ -79,12 +81,17 @@ class ShowAllCardViewController: UIViewController {
             if (quizType == "Alphabet") {
                 headerLabel.text = textLib.AlphabetListAllScreen.headerLabel
                 homeBnt.setImage(UIImage(named: "icon-alphabet"), for: .normal)
+                parentView.backgroundColor = textLib.AlphabetQuizScreen.parentViewBackground
+                collectionView.backgroundColor = textLib.AlphabetQuizScreen.parentViewBackground
             } else {
                 headerLabel.text = textLib.VowelListAllScreen.headerLabel
                 homeBnt.setImage(UIImage(named: "icon-vowel"), for: .normal)
+                parentView.backgroundColor = textLib.vowelScreen.parentViewBackground
+                collectionView.backgroundColor = textLib.vowelScreen.parentViewBackground
             }
+            headerLabel.textColor = kHeaderLabelColor
         }
         
     }
 
-     
+      

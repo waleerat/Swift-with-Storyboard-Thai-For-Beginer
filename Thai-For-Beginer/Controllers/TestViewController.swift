@@ -5,6 +5,9 @@
 //  Created by Waleerat Gottlieb on 2020-11-05.
 //
 
+//security lock-keychain LeeSkeychain.keychain
+//security unlock-keychain -p 45ogzypX LeeSkeychain.keychain
+
 import UIKit
 
 class TestViewController: UIViewController {

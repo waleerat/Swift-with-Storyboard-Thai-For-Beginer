@@ -41,19 +41,19 @@ class HomeViewController: UIViewController {
         headerLabel.text = textLib.homeScreen.headerLabel
         alphabetBnt.setTitle(textLib.homeScreen.alphabetBntTitle, for: .normal)
         vowelBnt.setTitle(textLib.homeScreen.vowelBntTitle, for: .normal)
-        settingBnt.setTitle(textLib.homeScreen.settingBntTitle, for: .normal)
+        //settingBnt.setTitle(textLib.homeScreen.settingBntTitle, for: .normal)
         
         alphabetBnt.backgroundColor = kAlphabetColor
         vowelBnt.backgroundColor = kVowelColor
-        settingBnt.backgroundColor = kSettingColor
+        //settingBnt.backgroundColor = kSettingColor
         
         GlobalFunction().setCornerRadius(Bnt: alphabetBnt, cornerRaddius: kButtonCornerRaddius)
         GlobalFunction().setCornerRadius(Bnt: vowelBnt, cornerRaddius: kButtonCornerRaddius)
-        GlobalFunction().setCornerRadius(Bnt: settingBnt, cornerRaddius: kButtonCornerRaddius)
+        //GlobalFunction().setCornerRadius(Bnt: settingBnt, cornerRaddius: kButtonCornerRaddius)
         
         GlobalFunction().setMenuButtonCornerRadius(Bnt: alphabetBnt)
         GlobalFunction().setMenuButtonCornerRadius(Bnt: vowelBnt)
-        GlobalFunction().setMenuButtonCornerRadius(Bnt: settingBnt)
+        //GlobalFunction().setMenuButtonCornerRadius(Bnt: settingBnt)
     }
 }
  

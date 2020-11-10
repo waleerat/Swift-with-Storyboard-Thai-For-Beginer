@@ -8,8 +8,8 @@
 import Foundation
 import UIKit
 
-public let kMaxQuiz = 5
-public let kNextQuesionDelay = 2.0
+public let kMaxQuiz = 10
+public let kNextQuesionDelay = 1.0
 public let kPlaySoundDelay = 0.2
 public var kCurrentScreen = ""
 public let kButtonCornerRaddius = 20
@@ -22,30 +22,31 @@ public let kVowelColor = #colorLiteral(red: 0.6549019608, green: 0.7882352941, b
 public let kSettingColor = #colorLiteral(red: 0.6549019608, green: 0.7882352941, blue: 0.3411764706, alpha: 1)
 public let kQuizBntColor = #colorLiteral(red: 0.6274509804, green: 0.8078431373, blue: 0.8509803922, alpha: 1)
 public let kAllCardsBntColor = #colorLiteral(red: 0.4666666687, green: 0.7647058964, blue: 0.2666666806, alpha: 1)
+public let kHeaderLabelColor = #colorLiteral(red: 0.2745098174, green: 0.4862745106, blue: 0.1411764771, alpha: 1)
 
 struct textLib {
     struct homeScreen {
         static let navigationTitle = "Home"
         static let parentViewBackground = kPrimaryColor
         static let headerLabel = "Menu"
-        static let alphabetBntTitle = "Learn Alphabet"
-        static let vowelBntTitle = "Learn Vowel"
+        static let alphabetBntTitle = "Learn Kor-Kai (ก)"
+        static let vowelBntTitle = "Learn Sara (-ะ)"
         static let settingBntTitle = "Setting"
     }
     
     struct alphabetScreen {
-        static let navigationTitle = "Alphabet"
+        static let navigationTitle = "Learn Kor-Kai (ก)"
         static let parentViewBackground = kPrimaryColor
-        static let headerLabel = "Alphabet"
+        static let headerLabel = "Kor-Kai (ก)"
         static let learnBntTitle = "Flash Card"
         static let showAllBntTitle = "All Alphabets"
         static let quizBntTitle = "Quiz"
     }
     
     struct vowelScreen {
-        static let navigationTitle = "Vowel"
+        static let navigationTitle = "Learn Sara (-ะ)"
         static let parentViewBackground = kPrimaryColor
-        static let headerLabel = "Vowel"
+        static let headerLabel = "Sara (-ะ)"
         static let learnBntTitle = "Flash Card"
         static let showAllBntTitle = "All Volels"
         static let quizBntTitle = "Quiz"
@@ -57,7 +58,7 @@ struct textLib {
         static let headerLabel = "Setting"
         static let alphabetSoundLabel = "Alphabet Sound"
         static let vowelSoundLabel = "Vowel Sound"
-        static let correctSoundLable = "Correct Sound"
+        static let correctSoundLable = "Correcting Sound"
         static let setDefaultBntTitle = "Set Default"
     }
     

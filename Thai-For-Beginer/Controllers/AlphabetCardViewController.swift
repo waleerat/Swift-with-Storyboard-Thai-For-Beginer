@@ -22,6 +22,7 @@ class AlphabetCardViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         viewDidLoad()
+        
     }
 
   override func viewDidLoad() {

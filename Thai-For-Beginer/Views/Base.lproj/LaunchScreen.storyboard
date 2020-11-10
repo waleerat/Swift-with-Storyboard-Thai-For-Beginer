@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -16,31 +17,45 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chicken" translatesAutoresizingMaskIntoConstraints="NO" id="8ge-g5-JrW">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="chicken" translatesAutoresizingMaskIntoConstraints="NO" id="8ge-g5-JrW">
                                 <rect key="frame" x="62.5" y="283" width="289" height="330"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="graphic-bg" translatesAutoresizingMaskIntoConstraints="NO" id="Ogc-jW-kaA">
                                 <rect key="frame" x="0.0" y="44" width="414" height="852"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Let's learn Kor-Kai" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yzi-XR-Qio">
-                                <rect key="frame" x="0.0" y="94" width="414" height="48"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Let's learn Kor-Kai" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yzi-XR-Qio">
+                                <rect key="frame" x="0.0" y="215" width="414" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" red="0.99740117790000005" green="0.58066505189999995" blue="0.0" alpha="0.99438142119999995" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="By : Waleerat S. Gottlieb" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mIj-dl-gnu">
+                                <rect key="frame" x="20" y="633" width="374" height="28"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <color key="textColor" systemColor="systemOrangeColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zfb-KC-OIH">
+                                <rect key="frame" x="62" y="669" width="322" height="93"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <string key="text">Programutveckling för iPhone och Android
+Malmö Yrkeshögskola
+Malmö, Sweden</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.99740117790000005" green="0.58066505189999995" blue="0.0" alpha="0.99438142119999995" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="8ge-g5-JrW" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="CB6-g8-7a8"/>
-                            <constraint firstItem="yzi-XR-Qio" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="EiA-Cy-6OK"/>
-                            <constraint firstItem="yzi-XR-Qio" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="Gfk-hZ-ZBI"/>
-                            <constraint firstItem="8ge-g5-JrW" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="SAr-61-5SK"/>
-                            <constraint firstItem="Ogc-jW-kaA" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="SQm-vU-GaW"/>
-                            <constraint firstItem="Ogc-jW-kaA" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Vja-U9-Q0G"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="yzi-XR-Qio" secondAttribute="trailing" id="lfi-os-7Hm"/>
-                            <constraint firstAttribute="bottom" secondItem="Ogc-jW-kaA" secondAttribute="bottom" id="xn9-gz-8he"/>
-                            <constraint firstItem="Ogc-jW-kaA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="xqW-XY-Kx5"/>
+                            <constraint firstItem="Ogc-jW-kaA" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="WG9-q8-Ck4"/>
+                            <constraint firstAttribute="bottom" secondItem="Ogc-jW-kaA" secondAttribute="bottom" id="fCH-Pj-zE4"/>
+                            <constraint firstAttribute="trailing" secondItem="Ogc-jW-kaA" secondAttribute="trailing" id="tKN-xc-ozU"/>
+                            <constraint firstItem="Ogc-jW-kaA" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="vXB-fd-gTK"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -54,6 +69,9 @@
         <image name="graphic-bg" width="629.5" height="1679.5"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
