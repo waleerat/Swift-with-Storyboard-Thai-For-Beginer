@@ -14,6 +14,12 @@ class ShowAllCardViewController: UIViewController {
     @IBOutlet weak var homeBnt: UIButton!
     @IBOutlet weak var collectionView: UICollectionView!
     
+    enum UIUserInterfaceIdiom : Int {
+        case unspecified
+        case phone // iPhone and iPod touch style UI
+        case pad   // iPad style UI (also includes macOS Catalyst)
+    }
+    
     var quizType: String!
     private var cardModels: [[String:String]] = []
         var selectedItem: Any?
@@ -27,8 +33,7 @@ class ShowAllCardViewController: UIViewController {
     
      
     @IBAction func goBackToMenu(_ sender: UIButton) {
-        
-        GlobalFunction().goBackToMenu(quizType: quizType)
+        GlobalFunction().gotoStoryboardWithIdentifier(quizType: quizType , identifier: "SubMenuVC")
     }
     
     
@@ -74,7 +79,18 @@ class ShowAllCardViewController: UIViewController {
         }
         
         func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-            return CGSize(width: collectionView.frame.width/2.05, height: collectionView.frame.height/3)
+            // columns
+            var DivFrameWidth = 2.02
+            switch UIDevice.current.userInterfaceIdiom {
+            case .pad:
+                DivFrameWidth = 3.04
+            case .phone,.unspecified,.tv,.carPlay,.mac:
+                DivFrameWidth = 2.02
+            @unknown default:
+                DivFrameWidth = 2.02
+            }
+            
+            return CGSize(width: collectionView.frame.width/CGFloat(DivFrameWidth), height: collectionView.frame.height/3)
         }
         
         private func setTheme(){

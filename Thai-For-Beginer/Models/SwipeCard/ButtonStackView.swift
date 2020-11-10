@@ -50,7 +50,7 @@ class ButtonStackView: UIStackView {
 
   private let HomeButton: ControlButton = {
     let button = ControlButton()
-    let icon = kCurrentScreen == "alphabet" ? "icon-alphabet" : "icon-vowel"
+    let icon = kCurrentScreen == "Alphabet" ? "icon-alphabet" : "icon-vowel"
  
     button.setImage(UIImage(named: icon), for: .normal)
     button.addTarget(self, action: #selector(handleTap), for: .touchUpInside)

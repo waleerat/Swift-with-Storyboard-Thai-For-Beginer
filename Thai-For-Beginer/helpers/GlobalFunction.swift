@@ -65,12 +65,11 @@ class GlobalFunction {
         let alertView = SCLAlertView(appearance: appearance)
        
         alertView.addButton("Play Again") {
-            //self.gotoStoryboard(storyboard : "Main", identifier : "QuizVC")
-            self.gotoQuizStoryboard(quizType: quizType)
+            self.gotoStoryboardWithIdentifier(quizType: quizType, identifier: "QuizVC")
         }
         
         alertView.addButton("\(quizType) Menu") {
-            self.gotoStoryboard(storyboard : "Main", identifier : "\(quizType)MenuVC")
+            self.gotoStoryboardWithIdentifier(quizType: quizType, identifier: "SubMenuVC")
         }
         
         alertView.addButton("Home Menu") {
@@ -80,11 +79,7 @@ class GlobalFunction {
     }
     
     func goBackToMenu(quizType:String){
-        if (quizType == "Alphabet") {
-            gotoStoryboard(storyboard : "Main", identifier : "AlphabetMenuVC")
-        } else {
-            gotoStoryboard(storyboard : "Main", identifier : "VowelMenuVC")
-        }
+        gotoStoryboardWithIdentifier(quizType: quizType, identifier: "SubMenuVC")
     }
     
     func gotoStoryboard(storyboard : String, identifier : String){
@@ -98,27 +93,26 @@ class GlobalFunction {
         }
     }
     
-    func gotoQuizStoryboard(quizType: String){
+    func gotoStoryboardWithIdentifier(quizType: String, identifier: String){
         let story = UIStoryboard(name: "Main", bundle:nil)
-        let vc = story.instantiateViewController(withIdentifier: "QuizVC") as! QuizViewController
-        vc.quizType = quizType
-        if kIsNavigationVC {
-            vc.hidesBottomBarWhenPushed = kHidesBottomBar
-        }else {
+       
+        switch identifier {
+        case "SubMenuVC":
+            let vc = story.instantiateViewController(withIdentifier: identifier) as! subMenuViewController
+            vc.quizType = quizType
             UIApplication.shared.windows.first?.rootViewController = vc
-        }
-    }
-    
-    func gotoAllCardStoryboard(quizType: String){
-        let story = UIStoryboard(name: "Main", bundle:nil)
-        let vc = story.instantiateViewController(withIdentifier: "ShowAllCardVC") as! ShowAllCardViewController
-        vc.quizType = quizType
-        if kIsNavigationVC {
-            vc.hidesBottomBarWhenPushed = kHidesBottomBar
-        }else {
+        case "QuizVC":
+            let vc = story.instantiateViewController(withIdentifier: identifier) as! QuizViewController
+            vc.quizType = quizType
             UIApplication.shared.windows.first?.rootViewController = vc
+        case "ShowAllCardVC":
+            let vc = story.instantiateViewController(withIdentifier: identifier) as! ShowAllCardViewController
+            vc.quizType = quizType
+            UIApplication.shared.windows.first?.rootViewController = vc
+        default:
+            return
         }
-    }
+    } 
 }
 
 

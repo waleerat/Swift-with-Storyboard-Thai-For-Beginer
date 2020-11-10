@@ -8,6 +8,22 @@
 import Foundation
 import UIKit
 
+//class checkDevice {
+//    func check(){
+//        switch UIDevice.current.userInterfaceIdiom {
+//        case .pad:
+//            public let kTitleAttributes = 50
+//            public let kSubtitleAttributes = 30
+//        case .phone,.unspecified,.tv,.carPlay,.mac:
+//            public let kTitleAttributes = 30
+//            public let kSubtitleAttributes = 20
+//        @unknown default:
+//            public let kTitleAttributes = 30
+//            public let kSubtitleAttributes = 20
+//        }
+//    }
+//}
+
 extension Date {
     
     func longDate() -> String {
@@ -87,17 +103,23 @@ extension NSAttributedString.Key {
         return shadow
     }()
     
-    static var titleAttributes: [NSAttributedString.Key: Any] = [
-        NSAttributedString.Key.font: UIFont(name: "ArialRoundedMTBold", size: 25)!,
-        NSAttributedString.Key.foregroundColor: UIColor.white,
-        NSAttributedString.Key.shadow: NSAttributedString.Key.shadowAttribute
-    ]
+    static var titleAttributes: [NSAttributedString.Key: Any] = {
+        let fontsize = UIDevice.current.userInterfaceIdiom == .pad ? 50 : 30
+        return [
+            NSAttributedString.Key.font: UIFont(name: "ArialRoundedMTBold", size: CGFloat((fontsize)))!,
+            NSAttributedString.Key.foregroundColor: UIColor.white,
+            NSAttributedString.Key.shadow: NSAttributedString.Key.shadowAttribute
+        ]
+    }()
     
-    static var subtitleAttributes: [NSAttributedString.Key: Any] = [
-        NSAttributedString.Key.font: UIFont(name: "Arial", size: 17)!,
-        NSAttributedString.Key.foregroundColor: UIColor.white,
-        NSAttributedString.Key.shadow: NSAttributedString.Key.shadowAttribute
-    ]
+    static var subtitleAttributes: [NSAttributedString.Key: Any] = {
+        let fontsize = UIDevice.current.userInterfaceIdiom == .pad ? 30 : 20
+        return [
+            NSAttributedString.Key.font: UIFont(name: "Arial", size: CGFloat(fontsize))!,
+            NSAttributedString.Key.foregroundColor: UIColor.white,
+            NSAttributedString.Key.shadow: NSAttributedString.Key.shadowAttribute
+        ]
+    }()
 }
 
 

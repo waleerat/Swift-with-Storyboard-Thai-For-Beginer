@@ -28,18 +28,23 @@ class SwipeCardFooterView: UIView {
     }
     
     private func initialize(title: String?, subtitle: String?) {
-        
+
         let attributedText = NSMutableAttributedString(string: (title ?? "") + "\n", attributes: NSAttributedString.Key.titleAttributes)
+        
         
         if let subtitle = subtitle, subtitle != "" {
             
             attributedText.append(NSMutableAttributedString(string: subtitle, attributes: NSAttributedString.Key.subtitleAttributes))
             let paragraphStyle = NSMutableParagraphStyle()
+            
+            paragraphStyle.alignment = UIDevice.current.userInterfaceIdiom == .pad ? .center : .left
+             
             paragraphStyle.lineSpacing = 4
             paragraphStyle.lineBreakMode = .byTruncatingTail
             attributedText.addAttributes([NSAttributedString.Key.paragraphStyle: paragraphStyle], range: NSRange(location: 0, length: attributedText.length))
             label.numberOfLines = 2
         }
+         
         
         label.attributedText = attributedText
         addSubview(label)

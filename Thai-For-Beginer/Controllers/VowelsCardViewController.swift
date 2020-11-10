@@ -118,7 +118,7 @@ extension VowelsCardViewController: ButtonStackViewDelegate, SwipeCardStackDataS
 
     func cardStack(_ cardStack: SwipeCardStack, cardForIndexAt index: Int) -> SwipeCard {
         let card = SwipeCard()
-        card.footerHeight = 80
+        card.footerHeight = UIDevice.current.userInterfaceIdiom == .pad ? 150 : 100
         //card.swipeDirections = [.left, .up, .right]
         card.swipeDirections = [.right]
         for direction in card.swipeDirections {
@@ -181,7 +181,7 @@ extension VowelsCardViewController: ButtonStackViewDelegate, SwipeCardStackDataS
       cardStack.swipe(.left, animated: true)
     case 3:
       //cardStack.swipe(.up, animated: true)
-        GlobalFunction().gotoStoryboard(storyboard : "Main", identifier : "VowelMenuVC")
+        GlobalFunction().gotoStoryboardWithIdentifier(quizType: "Vowel" , identifier: "SubMenuVC")
     case 4:
       cardStack.swipe(.right, animated: true)
     case 5:

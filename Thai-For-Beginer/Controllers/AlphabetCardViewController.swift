@@ -118,7 +118,7 @@ extension AlphabetCardViewController: ButtonStackViewDelegate, SwipeCardStackDat
 
     func cardStack(_ cardStack: SwipeCardStack, cardForIndexAt index: Int) -> SwipeCard {
         let card = SwipeCard()
-        card.footerHeight = 80
+        card.footerHeight = UIDevice.current.userInterfaceIdiom == .pad ? 150 : 100
         //card.swipeDirections = [.left, .up, .right]
         card.swipeDirections = [.right]
         for direction in card.swipeDirections {
@@ -178,7 +178,7 @@ extension AlphabetCardViewController: ButtonStackViewDelegate, SwipeCardStackDat
       cardStack.swipe(.left, animated: true)
     case 3:
       //cardStack.swipe(.up, animated: true)
-        GlobalFunction().gotoStoryboard(storyboard : "Main", identifier : "AlphabetMenuVC")
+        GlobalFunction().gotoStoryboardWithIdentifier(quizType: "Alphabet" , identifier: "SubMenuVC")
     case 4:
       cardStack.swipe(.right, animated: true)
     case 5:
@@ -196,7 +196,7 @@ extension AlphabetCardViewController: ButtonStackViewDelegate, SwipeCardStackDat
                 isPlay = isCorrectSound as! Bool
         }
         
-        if isPlay {
+        if isPlay { 
             let url = Bundle.main.url(forResource: currentPlay, withExtension: "mp3")
             player = try! AVAudioPlayer(contentsOf: url!)
             player?.play()

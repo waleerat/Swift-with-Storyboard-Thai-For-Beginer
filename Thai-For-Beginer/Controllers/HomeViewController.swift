@@ -22,13 +22,13 @@ class HomeViewController: UIViewController {
     }
      
     @IBAction func goToAlphabetMenuPress(_ sender: UIButton) {
-        kCurrentScreen = "alphabet"
-        GlobalFunction().gotoStoryboard(storyboard : "Main", identifier : "AlphabetMenuVC")
+        kCurrentScreen = "Alphabet"
+        GlobalFunction().gotoStoryboardWithIdentifier(quizType: kCurrentScreen , identifier: "SubMenuVC")
     }
     
     @IBAction func goToVowelMenuPress(_ sender: UIButton) {
-        kCurrentScreen = "vowel"
-        GlobalFunction().gotoStoryboard(storyboard : "Main", identifier : "VowelMenuVC")
+        kCurrentScreen = "Vowel"
+        GlobalFunction().gotoStoryboardWithIdentifier(quizType: kCurrentScreen , identifier: "SubMenuVC")
     }
     
     @IBAction func goToSettingPress(_ sender: UIButton) {

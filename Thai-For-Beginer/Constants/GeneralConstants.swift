@@ -8,8 +8,11 @@
 import Foundation
 import UIKit
 
+  
+
+
 public let kMaxQuiz = 10
-public let kNextQuesionDelay = 1.0
+public let kNextQuesionDelay = 1.5
 public let kPlaySoundDelay = 0.2
 public var kCurrentScreen = ""
 public let kButtonCornerRaddius = 20
@@ -25,19 +28,21 @@ public let kAllCardsBntColor = #colorLiteral(red: 0.4666666687, green: 0.7647058
 public let kHeaderLabelColor = #colorLiteral(red: 0.2745098174, green: 0.4862745106, blue: 0.1411764771, alpha: 1)
 
 struct textLib {
+
+    
     struct homeScreen {
         static let navigationTitle = "Home"
         static let parentViewBackground = kPrimaryColor
         static let headerLabel = "Menu"
-        static let alphabetBntTitle = "Learn Kor-Kai (ก)"
+        static let alphabetBntTitle = "Learn Ko-Kai (ก)"
         static let vowelBntTitle = "Learn Sara (-ะ)"
         static let settingBntTitle = "Setting"
     }
     
     struct alphabetScreen {
-        static let navigationTitle = "Learn Kor-Kai (ก)"
+        static let navigationTitle = "Learn Ko-Kai (ก)"
         static let parentViewBackground = kPrimaryColor
-        static let headerLabel = "Kor-Kai (ก)"
+        static let headerLabel = "Ko-Kai (ก)"
         static let learnBntTitle = "Flash Card"
         static let showAllBntTitle = "All Alphabets"
         static let quizBntTitle = "Quiz"
@@ -48,7 +53,7 @@ struct textLib {
         static let parentViewBackground = kPrimaryColor
         static let headerLabel = "Sara (-ะ)"
         static let learnBntTitle = "Flash Card"
-        static let showAllBntTitle = "All Volels"
+        static let showAllBntTitle = "All Volwels"
         static let quizBntTitle = "Quiz"
     }
     

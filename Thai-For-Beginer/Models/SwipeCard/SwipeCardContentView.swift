@@ -19,14 +19,16 @@ class SwipeCardContentView: UIView {
     
     private let imageView: UIImageView = {
         let imageView = UIImageView()
-        imageView.contentMode = .scaleAspectFill
+        imageView.contentMode = UIDevice.current.userInterfaceIdiom == .pad ? .scaleAspectFit : .scaleAspectFill
+//        imageView.contentMode = .scaleAspectFill
+//        imageView.contentMode = .scaleAspectFit
         return imageView
     }()
     
     private let gradientLayer : CAGradientLayer = {
        
         let gradientLayer = CAGradientLayer()
-        gradientLayer.colors = [UIColor.black.withAlphaComponent(0.01).cgColor, UIColor.black.withAlphaComponent(0.8).cgColor]
+        gradientLayer.colors = [UIColor.black.withAlphaComponent(0.1).cgColor, UIColor.black.withAlphaComponent(0.8).cgColor]
         gradientLayer.startPoint = CGPoint(x: 0.5, y: 0)
         gradientLayer.endPoint = CGPoint(x: 0.5, y: 1)
         return gradientLayer
@@ -57,7 +59,7 @@ class SwipeCardContentView: UIView {
     override func draw(_ rect: CGRect) {
         super.draw(rect)
         
-        let heightFactor: CGFloat = 0.35
+        let heightFactor: CGFloat = 0.15
         gradientLayer.frame = CGRect(x: 0, y: (1 - heightFactor) * bounds.height, width: bounds.width, height: heightFactor * bounds.height)
     }
 }

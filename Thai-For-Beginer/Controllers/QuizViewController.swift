@@ -59,8 +59,8 @@ class QuizViewController: UIViewController {
     }
     
     // MARK: - IBAction
-    @IBAction func goToHomeMenu(_ sender: UIButton) {
-        GlobalFunction().gotoStoryboard(storyboard : "Main", identifier : "HomeVC")
+    @IBAction func goToSubMenu(_ sender: UIButton) {
+        GlobalFunction().gotoStoryboardWithIdentifier(quizType: quizType , identifier: "SubMenuVC")
     }
     
     @IBAction func playSoundBntPress(_ sender: UIButton) {
@@ -177,7 +177,7 @@ class QuizViewController: UIViewController {
                 case 4:
                     GlobalFunction().setButtonBoderCorrect(Bnt: choice04Bnt)
                 default:
-                    print("No case")
+                    return
                 }
             }
         }
