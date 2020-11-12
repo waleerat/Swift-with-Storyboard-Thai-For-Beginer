@@ -42,6 +42,18 @@ class GlobalFunction {
         Bnt.layer.borderColor =  UIColor.red.cgColor
     }
     
+    func setButtonAnimate(Bnt: UIButton){
+        UIView.animate(withDuration: 0.4,
+            animations: {
+                Bnt.transform = CGAffineTransform(scaleX: 0.8, y: 0.8)
+            },
+            completion: { _ in
+                UIView.animate(withDuration: 0.4) {
+                    Bnt.transform = CGAffineTransform.identity
+                }
+            })
+    }
+    
     func setCornerRadius(Bnt: UIButton, cornerRaddius: Int) {
         Bnt.clipsToBounds = true
         Bnt.layer.cornerRadius = CGFloat(cornerRaddius)
@@ -49,10 +61,18 @@ class GlobalFunction {
     
     func setMenuButtonCornerRadius(Bnt: UIButton) {
         //Bnt.backgroundColor = .clear
-        Bnt.layer.borderWidth = 2
+        Bnt.layer.borderWidth = 1
         Bnt.layer.borderColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1).cgColor
         Bnt.clipsToBounds = true
         Bnt.layer.cornerRadius = CGFloat(20)
+        
+        // Shadow Color and Radius
+        Bnt.layer.shadowColor = #colorLiteral(red: 0.721568644, green: 0.8862745166, blue: 0.5921568871, alpha: 0.6758347603).cgColor
+        Bnt.layer.shadowOffset = CGSize(width: 0.0, height: 2.0)
+        Bnt.layer.shadowOpacity = 1.0
+        Bnt.layer.shadowRadius = 0.0
+        
+        Bnt.layer.masksToBounds = false
     }
     
     
@@ -99,23 +119,19 @@ class GlobalFunction {
         switch identifier {
         case "SubMenuVC":
             let vc = story.instantiateViewController(withIdentifier: identifier) as! subMenuViewController
-            vc.quizType = quizType
             UIApplication.shared.windows.first?.rootViewController = vc
         case "QuizVC":
             let vc = story.instantiateViewController(withIdentifier: identifier) as! QuizViewController
-            vc.quizType = quizType
             UIApplication.shared.windows.first?.rootViewController = vc
         case "ShowAllCardVC":
             let vc = story.instantiateViewController(withIdentifier: identifier) as! ShowAllCardViewController
-            vc.quizType = quizType
             UIApplication.shared.windows.first?.rootViewController = vc
         default:
             return
         }
     } 
 }
-
-
+ 
 extension RangeExpression where Bound: FixedWidthInteger {
     func randomElements(_ n: Int) -> [Bound] {
         precondition(n > 0)

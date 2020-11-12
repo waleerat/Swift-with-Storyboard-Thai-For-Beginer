@@ -24,7 +24,7 @@ class QuizViewController: UIViewController {
     @IBOutlet weak var progressLabel: UILabel!
     // MARK: - Vars
     
-    var quizType: String!
+     
     var quizNumberOfRows: Int!
     var quizData: [[String]]!
     
@@ -36,6 +36,7 @@ class QuizViewController: UIViewController {
     var editingMode = false
     
     var quizBrain = QuizBrain()
+    var gFunction = GlobalFunction()
     
     let appearance = SCLAlertView.SCLAppearance(
         showCloseButton: false
@@ -60,7 +61,7 @@ class QuizViewController: UIViewController {
     
     // MARK: - IBAction
     @IBAction func goToSubMenu(_ sender: UIButton) {
-        GlobalFunction().gotoStoryboardWithIdentifier(quizType: quizType , identifier: "SubMenuVC")
+        gFunction.gotoStoryboardWithIdentifier(quizType: kCurrentScreen , identifier: "SubMenuVC")
     }
     
     @IBAction func playSoundBntPress(_ sender: UIButton) {
@@ -86,17 +87,12 @@ class QuizViewController: UIViewController {
     }
     
     private func getQuizData(){
-        if let quizType = quizType {
-            if quizType == "Alphabet" {
-                quizData = AlphabetRows
-                quizNumberOfRows = 44
-            } else {
-                quizData = vowelRows
-                quizNumberOfRows = 32
-            }
-        } else {
+        if kCurrentScreen == "Alphabet" {
             quizData = AlphabetRows
             quizNumberOfRows = 44
+        } else {
+            quizData = vowelRows
+            quizNumberOfRows = 32
         }
     }
     
@@ -109,10 +105,14 @@ class QuizViewController: UIViewController {
         } else {
             editingMode = false
             updateEditingMode()
-            GlobalFunction().showScore(score: quizBrain.score, quizType: quizType)
+            gFunction.showScore(score: quizBrain.score, quizType: kCurrentScreen)
+            
+            let story = UIStoryboard(name: "Main", bundle:nil)
+            let vc = story.instantiateViewController(withIdentifier: "QuizResultVC") as! QuizResultViewController
+            vc.yourScore = quizBrain.score
+            UIApplication.shared.windows.first?.rootViewController = vc
         }
-    }
-    
+    } 
 
     private func randomQuiz(){
        
@@ -126,13 +126,13 @@ class QuizViewController: UIViewController {
                 code = self.quizData[alphabetOrder][0]
                 switch index + 1 {
                 case 1:
-                    GlobalFunction().setButtonBgImage(Bnt: self.choice01Bnt, UIImageNamed: code)
+                    self.gFunction.setButtonBgImage(Bnt: self.choice01Bnt, UIImageNamed: code)
                 case 2:
-                    GlobalFunction().setButtonBgImage(Bnt: self.choice02Bnt, UIImageNamed: code)
+                    self.gFunction.setButtonBgImage(Bnt: self.choice02Bnt, UIImageNamed: code)
                 case 3:
-                    GlobalFunction().setButtonBgImage(Bnt: self.choice03Bnt, UIImageNamed: code)
+                    self.gFunction.setButtonBgImage(Bnt: self.choice03Bnt, UIImageNamed: code)
                 case 4:
-                    GlobalFunction().setButtonBgImage(Bnt: self.choice04Bnt, UIImageNamed: code)
+                    self.gFunction.setButtonBgImage(Bnt: self.choice04Bnt, UIImageNamed: code)
                 default :
                     print("No case")
                 }
@@ -159,9 +159,9 @@ class QuizViewController: UIViewController {
     // MARK: - Check Answer
     private func checkAnswer(Buttonpressed: UIButton , selectedChoice: Int){
         var alphabetCode = ""
-        print(selectedChoice)
         let selected = quizData[quizChoices[selectedChoice]][0]
         let answer = quizData[quizAnswer][0]
+        
         
         for (index, alphabetOrder) in quizChoices.enumerated() {
             alphabetCode = quizData[alphabetOrder][0]
@@ -169,13 +169,17 @@ class QuizViewController: UIViewController {
             if (answer == alphabetCode) {
                 switch index + 1 {
                 case 1:
-                    GlobalFunction().setButtonBoderCorrect(Bnt: choice01Bnt)
+                    gFunction.setButtonBoderCorrect(Bnt: choice01Bnt)
+                    gFunction.setButtonAnimate(Bnt: choice01Bnt)
                 case 2:
-                    GlobalFunction().setButtonBoderCorrect(Bnt: choice02Bnt)
+                    gFunction.setButtonBoderCorrect(Bnt: choice02Bnt)
+                    gFunction.setButtonAnimate(Bnt: choice02Bnt)
                 case 3:
-                    GlobalFunction().setButtonBoderCorrect(Bnt: choice03Bnt)
+                    gFunction.setButtonBoderCorrect(Bnt: choice03Bnt)
+                    gFunction.setButtonAnimate(Bnt: choice03Bnt)
                 case 4:
-                    GlobalFunction().setButtonBoderCorrect(Bnt: choice04Bnt)
+                    gFunction.setButtonBoderCorrect(Bnt: choice04Bnt)
+                    gFunction.setButtonAnimate(Bnt: choice04Bnt)
                 default:
                     return
                 }
@@ -187,7 +191,7 @@ class QuizViewController: UIViewController {
             PlaySound(currentPlay: "sound-correct")
         } else {
             PlaySound(currentPlay: "sound-incorrect1")
-            GlobalFunction().setButtonBoderIncorrect(Bnt: Buttonpressed)
+            gFunction.setButtonBoderIncorrect(Bnt: Buttonpressed)
         }
         
         editingMode = false
@@ -228,26 +232,18 @@ class QuizViewController: UIViewController {
 
     
     private func setTheme(){
-        if let quizType = quizType {
-            if quizType == "Alphabet" {
-                homeBnt.setImage(UIImage(named: "icon-alphabet"), for: .normal)
-                navigationItem.title = textLib.AlphabetQuizScreen.navigationTitle
-                headerLabel.text = textLib.AlphabetQuizScreen.headerLabel
-                parentView.backgroundColor = textLib.AlphabetQuizScreen.parentViewBackground
-            } else {
-                homeBnt.setImage(UIImage(named: "icon-vowel"), for: .normal)
-                navigationItem.title = textLib.vowelScreen.navigationTitle
-                headerLabel.text = textLib.vowelScreen.headerLabel
-                parentView.backgroundColor = textLib.vowelScreen.parentViewBackground
-            }
-        } else {
+        if kCurrentScreen == "Alphabet" {
             homeBnt.setImage(UIImage(named: "icon-alphabet"), for: .normal)
             navigationItem.title = textLib.AlphabetQuizScreen.navigationTitle
             headerLabel.text = textLib.AlphabetQuizScreen.headerLabel
             parentView.backgroundColor = textLib.AlphabetQuizScreen.parentViewBackground
+        } else {
+            homeBnt.setImage(UIImage(named: "icon-vowel"), for: .normal)
+            navigationItem.title = textLib.vowelScreen.navigationTitle
+            headerLabel.text = textLib.vowelScreen.headerLabel
+            parentView.backgroundColor = textLib.vowelScreen.parentViewBackground
         }
         headerLabel.textColor = kHeaderLabelColor
-         
         
     }
         

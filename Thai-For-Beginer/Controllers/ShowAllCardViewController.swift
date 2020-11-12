@@ -20,9 +20,11 @@ class ShowAllCardViewController: UIViewController {
         case pad   // iPad style UI (also includes macOS Catalyst)
     }
     
-    var quizType: String!
+    
     private var cardModels: [[String:String]] = []
         var selectedItem: Any?
+    
+    var gFunction = GlobalFunction()
       
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,16 +35,15 @@ class ShowAllCardViewController: UIViewController {
     
      
     @IBAction func goBackToMenu(_ sender: UIButton) {
-        GlobalFunction().gotoStoryboardWithIdentifier(quizType: quizType , identifier: "SubMenuVC")
+        gFunction.gotoStoryboardWithIdentifier(quizType: kCurrentScreen , identifier: "SubMenuVC")
     }
     
-    
      func loadAlphabetsCard(){
-        if (quizType == "Alphabet") {
+        if (kCurrentScreen == "Alphabet") {
             for (item) in AlphabetRows {
                 cardModels.append(
                 [
-                    "quizType" : quizType,
+                    "quizType" : kCurrentScreen,
                     "code": item[0],
                     "thaiName": item[2]
                 ]
@@ -52,7 +53,7 @@ class ShowAllCardViewController: UIViewController {
             for (item) in vowelRows {
                 cardModels.append(
                 [
-                    "quizType" : quizType,
+                    "quizType" : kCurrentScreen,
                     "code": item[0],
                     "nameInThai": item[1]
                 ]
@@ -94,7 +95,7 @@ class ShowAllCardViewController: UIViewController {
         }
         
         private func setTheme(){
-            if (quizType == "Alphabet") {
+            if (kCurrentScreen == "Alphabet") {
                 headerLabel.text = textLib.AlphabetListAllScreen.headerLabel
                 homeBnt.setImage(UIImage(named: "icon-alphabet"), for: .normal)
                 parentView.backgroundColor = textLib.AlphabetQuizScreen.parentViewBackground

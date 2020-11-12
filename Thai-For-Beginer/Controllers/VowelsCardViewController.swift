@@ -18,6 +18,9 @@ class VowelsCardViewController: UIViewController {
     //private var replayCardModels = [VowelsCardModel]()
 
     var player: AVAudioPlayer?
+    
+    var gFunction = GlobalFunction()
+    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         viewDidLoad()
@@ -181,7 +184,7 @@ extension VowelsCardViewController: ButtonStackViewDelegate, SwipeCardStackDataS
       cardStack.swipe(.left, animated: true)
     case 3:
       //cardStack.swipe(.up, animated: true)
-        GlobalFunction().gotoStoryboardWithIdentifier(quizType: "Vowel" , identifier: "SubMenuVC")
+        gFunction.gotoStoryboardWithIdentifier(quizType: "Vowel" , identifier: "SubMenuVC")
     case 4:
       cardStack.swipe(.right, animated: true)
     case 5:

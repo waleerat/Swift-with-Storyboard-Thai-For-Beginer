@@ -21,6 +21,8 @@ class SettingViewController: UIViewController {
     
     let userDefaults = UserDefaults.standard
     
+    var gFunction = GlobalFunction()
+    
     override func viewDidLoad() {
         super.viewDidLoad() 
         setTheme()
@@ -28,7 +30,7 @@ class SettingViewController: UIViewController {
     }
     
     @IBAction func goToHomeMenu(_ sender: UIButton) {
-        GlobalFunction().gotoStoryboard(storyboard : "Main", identifier : "HomeVC")
+        gFunction.gotoStoryboard(storyboard : "Main", identifier : "HomeVC")
     }
  
     @IBAction func isAlphabetSound(_ sender: UISwitch) {
@@ -71,8 +73,8 @@ class SettingViewController: UIViewController {
         
         setDefaultBnt.setTitle(textLib.settingScreen.setDefaultBntTitle, for: .normal)
         setDefaultBnt.backgroundColor = kSettingColor
-        GlobalFunction().setCornerRadius(Bnt: setDefaultBnt, cornerRaddius: kButtonCornerRaddius)
-        GlobalFunction().setMenuButtonCornerRadius(Bnt: setDefaultBnt)
+        gFunction.setCornerRadius(Bnt: setDefaultBnt, cornerRaddius: kButtonCornerRaddius)
+        gFunction.setMenuButtonCornerRadius(Bnt: setDefaultBnt)
          
     }
     

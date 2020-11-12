@@ -18,6 +18,8 @@ class AlphabetCardViewController: UIViewController {
     //private var replayCardModels = [AlphabetsCardModel]()
     
     var player: AVAudioPlayer?
+    
+    var gFunction = GlobalFunction()
    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
@@ -178,7 +180,7 @@ extension AlphabetCardViewController: ButtonStackViewDelegate, SwipeCardStackDat
       cardStack.swipe(.left, animated: true)
     case 3:
       //cardStack.swipe(.up, animated: true)
-        GlobalFunction().gotoStoryboardWithIdentifier(quizType: "Alphabet" , identifier: "SubMenuVC")
+        gFunction.gotoStoryboardWithIdentifier(quizType: "Alphabet" , identifier: "SubMenuVC")
     case 4:
       cardStack.swipe(.right, animated: true)
     case 5:

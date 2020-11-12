@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -13,46 +13,96 @@
             <objects>
                 <viewController id="01J-lp-oVM" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="chicken" translatesAutoresizingMaskIntoConstraints="NO" id="8ge-g5-JrW">
-                                <rect key="frame" x="62.5" y="283" width="289" height="330"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="graphic-bg" translatesAutoresizingMaskIntoConstraints="NO" id="Ogc-jW-kaA">
-                                <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Let's learn Kor-Kai" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yzi-XR-Qio">
-                                <rect key="frame" x="0.0" y="215" width="414" height="48"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                <color key="textColor" red="0.99740117790000005" green="0.58066505189999995" blue="0.0" alpha="0.99438142119999995" colorSpace="custom" customColorSpace="displayP3"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="By : Waleerat S. Gottlieb" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mIj-dl-gnu">
-                                <rect key="frame" x="20" y="633" width="374" height="28"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
-                                <color key="textColor" systemColor="systemOrangeColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zfb-KC-OIH">
-                                <rect key="frame" x="62" y="669" width="322" height="93"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <string key="text">Programutveckling för iPhone och Android
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T4j-Oz-u4r">
+                                <rect key="frame" x="0.0" y="85" width="320" height="398"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Let's learn Kor-Kai" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yzi-XR-Qio">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="36"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                        <color key="textColor" red="0.99740117790000005" green="0.58066505189999995" blue="0.0" alpha="0.99438142119999995" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <nil key="highlightedColor"/>
+                                        <variation key="heightClass=regular-widthClass=compact">
+                                            <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=regular">
+                                            <fontDescription key="fontDescription" type="system" pointSize="100"/>
+                                        </variation>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zfb-KC-OIH">
+                                        <rect key="frame" x="0.0" y="285" width="320" height="93"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="93" id="esH-HQ-KcT"/>
+                                        </constraints>
+                                        <string key="text">Programutveckling för iPhone och Android
 Malmö Yrkeshögskola
 Malmö, Sweden</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.99740117790000005" green="0.58066505189999995" blue="0.0" alpha="0.99438142119999995" colorSpace="custom" customColorSpace="displayP3"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.99740117790000005" green="0.58066505189999995" blue="0.0" alpha="0.99438142119999995" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <nil key="highlightedColor"/>
+                                        <variation key="heightClass=regular-widthClass=regular">
+                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        </variation>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="By : Waleerat S. Gottlieb" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mIj-dl-gnu">
+                                        <rect key="frame" x="0.0" y="247" width="320" height="28"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="28" id="SBi-kL-arg">
+                                                <variation key="heightClass=regular-widthClass=regular" constant="49"/>
+                                            </constraint>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <color key="textColor" systemColor="systemOrangeColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chicken" translatesAutoresizingMaskIntoConstraints="NO" id="8ge-g5-JrW">
+                                        <rect key="frame" x="51" y="118" width="219" height="59"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="mIj-dl-gnu" firstAttribute="leading" secondItem="T4j-Oz-u4r" secondAttribute="leading" id="13U-F5-rGc"/>
+                                    <constraint firstAttribute="trailing" secondItem="mIj-dl-gnu" secondAttribute="trailing" id="5fj-Db-XvD"/>
+                                    <constraint firstItem="mIj-dl-gnu" firstAttribute="top" secondItem="8ge-g5-JrW" secondAttribute="bottom" constant="70" id="BcC-EF-B3V">
+                                        <variation key="heightClass=regular-widthClass=regular" constant="178"/>
+                                    </constraint>
+                                    <constraint firstAttribute="bottom" secondItem="Zfb-KC-OIH" secondAttribute="bottom" constant="20" id="LbA-Cx-LLd"/>
+                                    <constraint firstAttribute="trailing" secondItem="Zfb-KC-OIH" secondAttribute="trailing" id="QTa-k1-UER"/>
+                                    <constraint firstItem="yzi-XR-Qio" firstAttribute="top" secondItem="T4j-Oz-u4r" secondAttribute="top" id="bSK-xO-5GH"/>
+                                    <constraint firstItem="Zfb-KC-OIH" firstAttribute="leading" secondItem="T4j-Oz-u4r" secondAttribute="leading" id="fT2-t1-7cP"/>
+                                    <constraint firstItem="8ge-g5-JrW" firstAttribute="centerY" secondItem="T4j-Oz-u4r" secondAttribute="centerY" id="fqh-eG-zBt">
+                                        <variation key="heightClass=regular-widthClass=compact" constant="-51.5"/>
+                                        <variation key="heightClass=regular-widthClass=regular" constant="-34.5"/>
+                                    </constraint>
+                                    <constraint firstItem="8ge-g5-JrW" firstAttribute="centerX" secondItem="T4j-Oz-u4r" secondAttribute="centerX" id="gPN-Jt-7m0">
+                                        <variation key="heightClass=regular-widthClass=compact" constant="0.5"/>
+                                    </constraint>
+                                    <constraint firstItem="Zfb-KC-OIH" firstAttribute="top" secondItem="mIj-dl-gnu" secondAttribute="bottom" constant="10" id="qfz-mL-V1Q">
+                                        <variation key="heightClass=regular-widthClass=regular" constant="8"/>
+                                    </constraint>
+                                    <constraint firstItem="yzi-XR-Qio" firstAttribute="leading" secondItem="T4j-Oz-u4r" secondAttribute="leading" id="tc8-0d-HDr"/>
+                                    <constraint firstAttribute="trailing" secondItem="yzi-XR-Qio" secondAttribute="trailing" id="w4f-qC-A4H"/>
+                                    <constraint firstItem="8ge-g5-JrW" firstAttribute="leading" secondItem="T4j-Oz-u4r" secondAttribute="leading" constant="50.666666666666657" id="xWY-QD-gpb">
+                                        <variation key="heightClass=regular-widthClass=compact" constant="51"/>
+                                        <variation key="heightClass=regular-widthClass=regular" constant="203"/>
+                                    </constraint>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="T4j-Oz-u4r" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="85" id="6xO-6W-ceQ"/>
                             <constraint firstItem="Ogc-jW-kaA" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="WG9-q8-Ck4"/>
+                            <constraint firstItem="T4j-Oz-u4r" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="bbO-hj-Vu3"/>
+                            <constraint firstAttribute="trailing" secondItem="T4j-Oz-u4r" secondAttribute="trailing" id="cd8-y9-ZYM"/>
                             <constraint firstAttribute="bottom" secondItem="Ogc-jW-kaA" secondAttribute="bottom" id="fCH-Pj-zE4"/>
+                            <constraint firstItem="T4j-Oz-u4r" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="raR-d9-urr"/>
                             <constraint firstAttribute="trailing" secondItem="Ogc-jW-kaA" secondAttribute="trailing" id="tKN-xc-ozU"/>
                             <constraint firstItem="Ogc-jW-kaA" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="vXB-fd-gTK"/>
                         </constraints>
@@ -60,7 +110,7 @@ Malmö, Sweden</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="52.173913043478265" y="375"/>
+            <point key="canvasLocation" x="49.275362318840585" y="374.33035714285711"/>
         </scene>
     </scenes>
     <resources>

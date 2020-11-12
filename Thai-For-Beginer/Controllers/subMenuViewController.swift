@@ -15,7 +15,8 @@ class subMenuViewController: UIViewController {
     
     @IBOutlet weak var headerLabel: UILabel!
     
-    var quizType: String!
+     
+    var gFunction = GlobalFunction()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,43 +24,23 @@ class subMenuViewController: UIViewController {
     }
     
     @IBAction func goToHomeMenu(_ sender: UIButton) {
-        GlobalFunction().gotoStoryboard(storyboard : "Main", identifier : "HomeVC")
+        gFunction.gotoStoryboard(storyboard : "Main", identifier : "HomeVC")
     }
     
     @IBAction func goToLearnPress(_ sender: UIButton) {
-        GlobalFunction().gotoStoryboard(storyboard : "Main", identifier : "\(quizType!)CardVC")
+        gFunction.gotoStoryboard(storyboard : "Main", identifier : "\(kCurrentScreen)CardVC")
     }
     
     @IBAction func goToShowAllCards(_ sender: UIButton) {
-        GlobalFunction().gotoStoryboardWithIdentifier(quizType: quizType , identifier: "ShowAllCardVC")
+        gFunction.gotoStoryboardWithIdentifier(quizType: kCurrentScreen , identifier: "ShowAllCardVC")
     }
     
     @IBAction func goToTestPress(_ sender: UIButton) {
-        GlobalFunction().gotoStoryboardWithIdentifier(quizType: quizType, identifier: "QuizVC")
+        gFunction.gotoStoryboardWithIdentifier(quizType: kCurrentScreen, identifier: "QuizVC")
     }
     
     private func setTheme(){
-        if let quizType = quizType {
-            if quizType == "Alphabet" {
-                headerLabel.text = textLib.alphabetScreen.headerLabel
-                learnBnt.setTitle(textLib.alphabetScreen.learnBntTitle, for: .normal)
-                quizBnt.setTitle(textLib.alphabetScreen.quizBntTitle, for: .normal)
-                allCardsBnt.setTitle(textLib.alphabetScreen.showAllBntTitle, for: .normal)
-                
-                learnBnt.backgroundColor = kAlphabetColor
-                quizBnt.backgroundColor = kQuizBntColor
-                allCardsBnt.backgroundColor = kAllCardsBntColor
-            } else {
-                headerLabel.text = textLib.vowelScreen.headerLabel
-                learnBnt.setTitle(textLib.vowelScreen.learnBntTitle, for: .normal)
-                quizBnt.setTitle(textLib.vowelScreen.quizBntTitle, for: .normal)
-                allCardsBnt.setTitle(textLib.vowelScreen.showAllBntTitle, for: .normal)
-                
-                learnBnt.backgroundColor = kAlphabetColor
-                quizBnt.backgroundColor = kQuizBntColor
-                allCardsBnt.backgroundColor = kAllCardsBntColor
-            }
-        } else {
+        if kCurrentScreen == "Alphabet" {
             headerLabel.text = textLib.alphabetScreen.headerLabel
             learnBnt.setTitle(textLib.alphabetScreen.learnBntTitle, for: .normal)
             quizBnt.setTitle(textLib.alphabetScreen.quizBntTitle, for: .normal)
@@ -68,16 +49,25 @@ class subMenuViewController: UIViewController {
             learnBnt.backgroundColor = kAlphabetColor
             quizBnt.backgroundColor = kQuizBntColor
             allCardsBnt.backgroundColor = kAllCardsBntColor
-        } 
+        } else {
+            headerLabel.text = textLib.vowelScreen.headerLabel
+            learnBnt.setTitle(textLib.vowelScreen.learnBntTitle, for: .normal)
+            quizBnt.setTitle(textLib.vowelScreen.quizBntTitle, for: .normal)
+            allCardsBnt.setTitle(textLib.vowelScreen.showAllBntTitle, for: .normal)
+            
+            learnBnt.backgroundColor = kAlphabetColor
+            quizBnt.backgroundColor = kQuizBntColor
+            allCardsBnt.backgroundColor = kAllCardsBntColor
+        }
         
         navigationItem.title = textLib.alphabetScreen.navigationTitle
         parentView.backgroundColor = textLib.alphabetScreen.parentViewBackground
         
-        GlobalFunction().setCornerRadius(Bnt: learnBnt, cornerRaddius: kButtonCornerRaddius)
-        GlobalFunction().setCornerRadius(Bnt: quizBnt, cornerRaddius: kButtonCornerRaddius)
+        gFunction.setCornerRadius(Bnt: learnBnt, cornerRaddius: kButtonCornerRaddius)
+        gFunction.setCornerRadius(Bnt: quizBnt, cornerRaddius: kButtonCornerRaddius)
         
-        GlobalFunction().setMenuButtonCornerRadius(Bnt: learnBnt)
-        GlobalFunction().setMenuButtonCornerRadius(Bnt: quizBnt)
-        GlobalFunction().setMenuButtonCornerRadius(Bnt: allCardsBnt)
+        gFunction.setMenuButtonCornerRadius(Bnt: learnBnt)
+        gFunction.setMenuButtonCornerRadius(Bnt: quizBnt)
+        gFunction.setMenuButtonCornerRadius(Bnt: allCardsBnt)
     }
 }

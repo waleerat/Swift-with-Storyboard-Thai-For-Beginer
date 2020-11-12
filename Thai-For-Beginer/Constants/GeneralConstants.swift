@@ -8,13 +8,11 @@
 import Foundation
 import UIKit
 
-  
-
 
 public let kMaxQuiz = 10
 public let kNextQuesionDelay = 1.5
 public let kPlaySoundDelay = 0.2
-public var kCurrentScreen = ""
+public var kCurrentScreen = "Alphabet"
 public let kButtonCornerRaddius = 20
 public let kHidesBottomBar = true
 public let kIsNavigationVC = false
@@ -46,6 +44,11 @@ struct textLib {
         static let learnBntTitle = "Flash Card"
         static let showAllBntTitle = "All Alphabets"
         static let quizBntTitle = "Quiz"
+        
+        static let yourScoreHeader = "Your Score"
+        static let playAgainBntTitle = "Play Again"
+        static let gotoSubmenuBntTitle = "Go to Menu"
+        
     }
     
     struct vowelScreen {
@@ -55,6 +58,11 @@ struct textLib {
         static let learnBntTitle = "Flash Card"
         static let showAllBntTitle = "All Volwels"
         static let quizBntTitle = "Quiz"
+        
+        static let yourScoreHeader = "Your Score"
+        static let playAgainBntTitle = "Play Again"
+        static let gotoSubmenuBntTitle = "Go to Menu"
+        
     }
     
     struct settingScreen {

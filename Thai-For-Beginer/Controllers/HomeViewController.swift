@@ -15,6 +15,8 @@ class HomeViewController: UIViewController {
     
     @IBOutlet weak var headerLabel: UILabel!
     
+    var gFunction = GlobalFunction()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.isNavigationBarHidden = true
@@ -23,16 +25,16 @@ class HomeViewController: UIViewController {
      
     @IBAction func goToAlphabetMenuPress(_ sender: UIButton) {
         kCurrentScreen = "Alphabet"
-        GlobalFunction().gotoStoryboardWithIdentifier(quizType: kCurrentScreen , identifier: "SubMenuVC")
+        gFunction.gotoStoryboardWithIdentifier(quizType: kCurrentScreen , identifier: "SubMenuVC")
     }
     
     @IBAction func goToVowelMenuPress(_ sender: UIButton) {
         kCurrentScreen = "Vowel"
-        GlobalFunction().gotoStoryboardWithIdentifier(quizType: kCurrentScreen , identifier: "SubMenuVC")
+        gFunction.gotoStoryboardWithIdentifier(quizType: kCurrentScreen , identifier: "SubMenuVC")
     }
     
     @IBAction func goToSettingPress(_ sender: UIButton) {
-        GlobalFunction().gotoStoryboard(storyboard : "Main", identifier : "SettingVC")
+        gFunction.gotoStoryboard(storyboard : "Main", identifier : "SettingVC")
     }
     
     private func setTheme(){
@@ -47,13 +49,13 @@ class HomeViewController: UIViewController {
         vowelBnt.backgroundColor = kVowelColor
         //settingBnt.backgroundColor = kSettingColor
         
-        GlobalFunction().setCornerRadius(Bnt: alphabetBnt, cornerRaddius: kButtonCornerRaddius)
-        GlobalFunction().setCornerRadius(Bnt: vowelBnt, cornerRaddius: kButtonCornerRaddius)
-        //GlobalFunction().setCornerRadius(Bnt: settingBnt, cornerRaddius: kButtonCornerRaddius)
+        gFunction.setCornerRadius(Bnt: alphabetBnt, cornerRaddius: kButtonCornerRaddius)
+        gFunction.setCornerRadius(Bnt: vowelBnt, cornerRaddius: kButtonCornerRaddius)
+        //gFunction.setCornerRadius(Bnt: settingBnt, cornerRaddius: kButtonCornerRaddius)
         
-        GlobalFunction().setMenuButtonCornerRadius(Bnt: alphabetBnt)
-        GlobalFunction().setMenuButtonCornerRadius(Bnt: vowelBnt)
-        //GlobalFunction().setMenuButtonCornerRadius(Bnt: settingBnt)
+        gFunction.setMenuButtonCornerRadius(Bnt: alphabetBnt)
+        gFunction.setMenuButtonCornerRadius(Bnt: vowelBnt)
+        //gFunction.setMenuButtonCornerRadius(Bnt: settingBnt)
     }
 }
  

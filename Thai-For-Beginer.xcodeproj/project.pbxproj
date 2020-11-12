@@ -8,11 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		2384D9417BF6FBA844AC3D2D /* Pods_Thai_For_Beginer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE029C78ABD6ED608B550C7B /* Pods_Thai_For_Beginer.framework */; };
+		AB0F8DA5255DC437003A97FA /* QuizResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0F8DA4255DC437003A97FA /* QuizResultViewController.swift */; };
 		AB4057E52553FBC700C03C1E /* ShowAllCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB4057E42553FBC600C03C1E /* ShowAllCardViewController.swift */; };
 		AB4057EC2553FCD700C03C1E /* ShowAllCardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB4057EB2553FCD700C03C1E /* ShowAllCardCollectionViewCell.swift */; };
 		AB4C2C66254DEE75001CE842 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB4C2C65254DEE75001CE842 /* AppDelegate.swift */; };
 		AB4C2C68254DEE75001CE842 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB4C2C67254DEE75001CE842 /* SceneDelegate.swift */; };
-		AB4C2C6A254DEE75001CE842 /* Quiz1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB4C2C69254DEE75001CE842 /* Quiz1ViewController.swift */; };
 		AB4C2C6D254DEE75001CE842 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB4C2C6B254DEE75001CE842 /* Main.storyboard */; };
 		AB4C2C6F254DEE78001CE842 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB4C2C6E254DEE78001CE842 /* Assets.xcassets */; };
 		AB4C2C72254DEE78001CE842 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB4C2C70254DEE78001CE842 /* LaunchScreen.storyboard */; };
@@ -74,7 +74,6 @@
 		AB4C2D42254FFCC3001CE842 /* ThaiForBeginerCoreData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AB4C2D40254FFCC3001CE842 /* ThaiForBeginerCoreData.xcdatamodeld */; };
 		AB4C2D46255000E1001CE842 /* QuizBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB4C2D45255000E1001CE842 /* QuizBrain.swift */; };
 		AB4C2D49255003E2001CE842 /* GeneralConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB4C2D48255003E2001CE842 /* GeneralConstants.swift */; };
-		AB4C2D4C25501610001CE842 /* QuizResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB4C2D4B25501610001CE842 /* QuizResultViewController.swift */; };
 		AB4C2D7B255093B6001CE842 /* 214.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AB4C2D66255093B5001CE842 /* 214.mp3 */; };
 		AB4C2D7C255093B6001CE842 /* 219.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AB4C2D67255093B5001CE842 /* 219.mp3 */; };
 		AB4C2D7D255093B6001CE842 /* 206.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AB4C2D68255093B5001CE842 /* 206.mp3 */; };
@@ -130,13 +129,11 @@
 		AB4C2DD0255093F9001CE842 /* 119.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AB4C2DB0255093F9001CE842 /* 119.mp3 */; };
 		AB4C2DD42550977D001CE842 /* VowelsCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB4C2DD32550977D001CE842 /* VowelsCardViewController.swift */; };
 		AB4C2DD7255175E5001CE842 /* QuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB4C2DD6255175E4001CE842 /* QuizViewController.swift */; };
-		AB4C2DDB25518085001CE842 /* AlertView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB4C2DDA25518085001CE842 /* AlertView.xib */; };
 		AB4C2DEB2551CBD7001CE842 /* sound-incorrect.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AB4C2DE92551CBD6001CE842 /* sound-incorrect.mp3 */; };
 		AB4C2DEC2551CBD7001CE842 /* sound-correct.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AB4C2DEA2551CBD7001CE842 /* sound-correct.mp3 */; };
 		AB4C2DEF2551CDCF001CE842 /* sound-incorrect1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AB4C2DEE2551CDCE001CE842 /* sound-incorrect1.mp3 */; };
 		AB4C2DFD2551DA95001CE842 /* VowelsCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB4C2DFC2551DA95001CE842 /* VowelsCard.swift */; };
 		AB4C2E022551DAB2001CE842 /* VowelCardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB4C2E012551DAB2001CE842 /* VowelCardModel.swift */; };
-		AB4C2E12255228F2001CE842 /* VowelQuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB4C2E11255228F1001CE842 /* VowelQuizViewController.swift */; };
 		AB4C2E1525522B85001CE842 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB4C2E1425522B85001CE842 /* HomeViewController.swift */; };
 		AB4C2E1825522B9E001CE842 /* subMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB4C2E1725522B9E001CE842 /* subMenuViewController.swift */; };
 		AB4C2E1E2552B281001CE842 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB4C2E1D2552B280001CE842 /* SettingViewController.swift */; };
@@ -145,12 +142,12 @@
 /* Begin PBXFileReference section */
 		5845E92D0F3A8C0D4F409D42 /* Pods-Thai-For-Beginer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Thai-For-Beginer.debug.xcconfig"; path = "Target Support Files/Pods-Thai-For-Beginer/Pods-Thai-For-Beginer.debug.xcconfig"; sourceTree = "<group>"; };
 		AB0DC55E2559F3A2008C437A /* Thai-For-BeginerRelease.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Thai-For-BeginerRelease.entitlements"; sourceTree = "<group>"; };
+		AB0F8DA4255DC437003A97FA /* QuizResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizResultViewController.swift; sourceTree = "<group>"; };
 		AB4057E42553FBC600C03C1E /* ShowAllCardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowAllCardViewController.swift; sourceTree = "<group>"; };
 		AB4057EB2553FCD700C03C1E /* ShowAllCardCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowAllCardCollectionViewCell.swift; sourceTree = "<group>"; };
 		AB4C2C62254DEE75001CE842 /* Thai-For-Beginer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Thai-For-Beginer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB4C2C65254DEE75001CE842 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AB4C2C67254DEE75001CE842 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		AB4C2C69254DEE75001CE842 /* Quiz1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quiz1ViewController.swift; sourceTree = "<group>"; };
 		AB4C2C6C254DEE75001CE842 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AB4C2C6E254DEE78001CE842 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AB4C2C71254DEE78001CE842 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -213,7 +210,6 @@
 		AB4C2D41254FFCC3001CE842 /* ThaiForBeginerCoreData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ThaiForBeginerCoreData.xcdatamodel; sourceTree = "<group>"; };
 		AB4C2D45255000E1001CE842 /* QuizBrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizBrain.swift; sourceTree = "<group>"; };
 		AB4C2D48255003E2001CE842 /* GeneralConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralConstants.swift; sourceTree = "<group>"; };
-		AB4C2D4B25501610001CE842 /* QuizResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizResultViewController.swift; sourceTree = "<group>"; };
 		AB4C2D66255093B5001CE842 /* 214.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 214.mp3; sourceTree = "<group>"; };
 		AB4C2D67255093B5001CE842 /* 219.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 219.mp3; sourceTree = "<group>"; };
 		AB4C2D68255093B5001CE842 /* 206.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 206.mp3; sourceTree = "<group>"; };
@@ -269,18 +265,14 @@
 		AB4C2DB0255093F9001CE842 /* 119.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 119.mp3; sourceTree = "<group>"; };
 		AB4C2DD32550977D001CE842 /* VowelsCardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VowelsCardViewController.swift; sourceTree = "<group>"; };
 		AB4C2DD6255175E4001CE842 /* QuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizViewController.swift; sourceTree = "<group>"; };
-		AB4C2DDA25518085001CE842 /* AlertView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AlertView.xib; sourceTree = "<group>"; };
 		AB4C2DE92551CBD6001CE842 /* sound-incorrect.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "sound-incorrect.mp3"; sourceTree = "<group>"; };
 		AB4C2DEA2551CBD7001CE842 /* sound-correct.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "sound-correct.mp3"; sourceTree = "<group>"; };
 		AB4C2DEE2551CDCE001CE842 /* sound-incorrect1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "sound-incorrect1.mp3"; sourceTree = "<group>"; };
 		AB4C2DFC2551DA95001CE842 /* VowelsCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VowelsCard.swift; sourceTree = "<group>"; };
 		AB4C2E012551DAB2001CE842 /* VowelCardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VowelCardModel.swift; sourceTree = "<group>"; };
-		AB4C2E11255228F1001CE842 /* VowelQuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VowelQuizViewController.swift; sourceTree = "<group>"; };
 		AB4C2E1425522B85001CE842 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		AB4C2E1725522B9E001CE842 /* subMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = subMenuViewController.swift; sourceTree = "<group>"; };
 		AB4C2E1D2552B280001CE842 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
-		AB6CD42E255A8ECB0068AFF9 /* distribution.cer */ = {isa = PBXFileReference; lastKnownFileType = file; path = distribution.cer; sourceTree = "<group>"; };
-		AB6CD42F255A8EE00068AFF9 /* development.cer */ = {isa = PBXFileReference; lastKnownFileType = file; name = development.cer; path = ../../../../../Downloads/development.cer; sourceTree = "<group>"; };
 		F89DBCB084B87B0D522D622A /* Pods-Thai-For-Beginer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Thai-For-Beginer.release.xcconfig"; path = "Target Support Files/Pods-Thai-For-Beginer/Pods-Thai-For-Beginer.release.xcconfig"; sourceTree = "<group>"; };
 		FE029C78ABD6ED608B550C7B /* Pods_Thai_For_Beginer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Thai_For_Beginer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -336,16 +328,13 @@
 			isa = PBXGroup;
 			children = (
 				AB0DC55E2559F3A2008C437A /* Thai-For-BeginerRelease.entitlements */,
-				AB4C2DF82551D715001CE842 /* _Temp */,
 				AB4C2D04254F4DE0001CE842 /* Models */,
 				AB4C2D3F254FF98D001CE842 /* Views */,
 				AB4C2D3E254FF96B001CE842 /* Controllers */,
-				AB4C2D10254F52BE001CE842 /* helpers */,
+				AB4C2D10254F52BE001CE842 /* Helpers */,
 				AB4C2C7A254DF12A001CE842 /* Constants */,
 				AB4C2C67254DEE75001CE842 /* SceneDelegate.swift */,
 				AB4C2C65254DEE75001CE842 /* AppDelegate.swift */,
-				AB6CD42F255A8EE00068AFF9 /* development.cer */,
-				AB6CD42E255A8ECB0068AFF9 /* distribution.cer */,
 				AB4C2C6E254DEE78001CE842 /* Assets.xcassets */,
 				AB4C2C73254DEE78001CE842 /* Info.plist */,
 				AB4C2C81254F21AA001CE842 /* Sounds */,
@@ -385,13 +374,13 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
-		AB4C2D10254F52BE001CE842 /* helpers */ = {
+		AB4C2D10254F52BE001CE842 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
 				AB4C2D11254F52D3001CE842 /* extensions.swift */,
 				AB4C2D32254F7839001CE842 /* GlobalFunction.swift */,
 			);
-			path = helpers;
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		AB4C2D3C254FF93E001CE842 /* AlphabetsCard */ = {
@@ -422,6 +411,7 @@
 				AB4C2E1D2552B280001CE842 /* SettingViewController.swift */,
 				AB4057E42553FBC600C03C1E /* ShowAllCardViewController.swift */,
 				AB4057EB2553FCD700C03C1E /* ShowAllCardCollectionViewCell.swift */,
+				AB0F8DA4255DC437003A97FA /* QuizResultViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -553,17 +543,6 @@
 			path = AlphabetSounds;
 			sourceTree = "<group>";
 		};
-		AB4C2DF82551D715001CE842 /* _Temp */ = {
-			isa = PBXGroup;
-			children = (
-				AB4C2C69254DEE75001CE842 /* Quiz1ViewController.swift */,
-				AB4C2E11255228F1001CE842 /* VowelQuizViewController.swift */,
-				AB4C2DDA25518085001CE842 /* AlertView.xib */,
-				AB4C2D4B25501610001CE842 /* QuizResultViewController.swift */,
-			);
-			path = _Temp;
-			sourceTree = "<group>";
-		};
 		AB4C2DFA2551DA03001CE842 /* VowelsCard */ = {
 			isa = PBXGroup;
 			children = (
@@ -658,7 +637,6 @@
 				AB4C2CB4254F21CB001CE842 /* 030.mp3 in Resources */,
 				AB4C2DEF2551CDCF001CE842 /* sound-incorrect1.mp3 in Resources */,
 				AB4C2DBD255093F9001CE842 /* 117.mp3 in Resources */,
-				AB4C2DDB25518085001CE842 /* AlertView.xib in Resources */,
 				AB4C2CB6254F21CB001CE842 /* 038.mp3 in Resources */,
 				AB4C2CD2254F21CB001CE842 /* 033.mp3 in Resources */,
 				AB4C2CB5254F21CB001CE842 /* 043.mp3 in Resources */,
@@ -809,7 +787,6 @@
 				AB4C2D12254F52D3001CE842 /* extensions.swift in Sources */,
 				AB4C2D0A254F51CE001CE842 /* AlphabetsCardModel.swift in Sources */,
 				AB4057EC2553FCD700C03C1E /* ShowAllCardCollectionViewCell.swift in Sources */,
-				AB4C2C6A254DEE75001CE842 /* Quiz1ViewController.swift in Sources */,
 				AB4C2DD42550977D001CE842 /* VowelsCardViewController.swift in Sources */,
 				AB4057E52553FBC700C03C1E /* ShowAllCardViewController.swift in Sources */,
 				AB4C2DFD2551DA95001CE842 /* VowelsCard.swift in Sources */,
@@ -817,17 +794,16 @@
 				AB4C2C66254DEE75001CE842 /* AppDelegate.swift in Sources */,
 				AB4C2E1525522B85001CE842 /* HomeViewController.swift in Sources */,
 				AB4C2E1825522B9E001CE842 /* subMenuViewController.swift in Sources */,
-				AB4C2D4C25501610001CE842 /* QuizResultViewController.swift in Sources */,
 				AB4C2D49255003E2001CE842 /* GeneralConstants.swift in Sources */,
 				AB4C2D42254FFCC3001CE842 /* ThaiForBeginerCoreData.xcdatamodeld in Sources */,
 				AB4C2DD7255175E5001CE842 /* QuizViewController.swift in Sources */,
 				AB4C2D06254F4E02001CE842 /* AlphabetsCard.swift in Sources */,
 				AB4C2D17254F5499001CE842 /* SwipeCardFooterView.swift in Sources */,
+				AB0F8DA5255DC437003A97FA /* QuizResultViewController.swift in Sources */,
 				AB4C2C7C254DF145001CE842 /* dataLibrary.swift in Sources */,
 				AB4C2C68254DEE75001CE842 /* SceneDelegate.swift in Sources */,
 				AB4C2D29254F5805001CE842 /* ButtonStackView.swift in Sources */,
 				AB4C2E1E2552B281001CE842 /* SettingViewController.swift in Sources */,
-				AB4C2E12255228F2001CE842 /* VowelQuizViewController.swift in Sources */,
 				AB4C2D1F254F55C3001CE842 /* AlphabetCardViewController.swift in Sources */,
 				AB4C2D46255000E1001CE842 /* QuizBrain.swift in Sources */,
 			);

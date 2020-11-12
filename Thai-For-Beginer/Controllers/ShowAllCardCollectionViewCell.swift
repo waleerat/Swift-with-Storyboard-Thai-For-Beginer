@@ -13,17 +13,20 @@ class ShowAllCardCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var imageBnt: UIButton!
     var currentPlay: String!
     var player: AVAudioPlayer?
+    
+    var gFunction = GlobalFunction()
      
     
     func setCollection(cardModel: [String:String]){
-        GlobalFunction().setCornerRadius(Bnt: imageBnt, cornerRaddius: 10)
+        gFunction.setCornerRadius(Bnt: imageBnt, cornerRaddius: 10)
         if let code = cardModel["code"] {
-            GlobalFunction().setButtonBgImage(Bnt: self.imageBnt, UIImageNamed: code)
+            gFunction.setButtonBgImage(Bnt: self.imageBnt, UIImageNamed: code)
             currentPlay = code
         }
     }
     
     @IBAction func imageBntPress(_ sender: UIButton) {
+        gFunction.setButtonAnimate(Bnt: sender)
         if let currentPlay = currentPlay {
             PlaySound(currentPlay: currentPlay)
         }
@@ -35,3 +38,4 @@ class ShowAllCardCollectionViewCell: UICollectionViewCell {
         player?.play()
     }
 }
+
