@@ -32,15 +32,15 @@ struct textLib {
         static let navigationTitle = "Home"
         static let parentViewBackground = kPrimaryColor
         static let headerLabel = "Menu"
-        static let alphabetBntTitle = "Learn Ko-Kai (ก)"
-        static let vowelBntTitle = "Learn Sara (-ะ)"
+        static let alphabetBntTitle = "Alphabets (Ko-Kai)"
+        static let vowelBntTitle = "Vowel (Sara)"
         static let settingBntTitle = "Setting"
     }
     
     struct alphabetScreen {
-        static let navigationTitle = "Learn Ko-Kai (ก)"
+        static let navigationTitle = "Alphabets (Ko-Kai)"
         static let parentViewBackground = kPrimaryColor
-        static let headerLabel = "Ko-Kai (ก)"
+        static let headerLabel = "Alphabets (Ko-Kai)"
         static let learnBntTitle = "Flash Card"
         static let showAllBntTitle = "All Alphabets"
         static let quizBntTitle = "Quiz"
@@ -52,9 +52,9 @@ struct textLib {
     }
     
     struct vowelScreen {
-        static let navigationTitle = "Learn Sara (-ะ)"
+        static let navigationTitle = "Vowel (Sara)"
         static let parentViewBackground = kPrimaryColor
-        static let headerLabel = "Sara (-ะ)"
+        static let headerLabel = "Vowel (Sara)"
         static let learnBntTitle = "Flash Card"
         static let showAllBntTitle = "All Volwels"
         static let quizBntTitle = "Quiz"

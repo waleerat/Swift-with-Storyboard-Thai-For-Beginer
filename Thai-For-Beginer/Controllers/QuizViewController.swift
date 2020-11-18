@@ -52,6 +52,7 @@ class QuizViewController: UIViewController {
         setTheme()
         quizBrain.resetQuiz()
         loadNextQuiz()
+        
     }
     
     override func viewDidLoad() {
@@ -215,8 +216,10 @@ class QuizViewController: UIViewController {
         let userDefaults = UserDefaults.standard
         var isPlay = true
         
-        if let isCorrectSound = userDefaults.value(forKey: "isCorrectSound") {
-                isPlay = isCorrectSound as! Bool
+        if (currentPlay == "sound-correct" || currentPlay == "sound-incorrect") {
+            if let isCorrectSound = userDefaults.value(forKey: "isCorrectSound") {
+                    isPlay = isCorrectSound as! Bool
+            }
         }
         
         if isPlay {
@@ -225,6 +228,7 @@ class QuizViewController: UIViewController {
             player?.play()
         }
     }
+      
     
     private func getProgressText(){
         progressLabel.text = " \(quizBrain.questionNumber) / \(kMaxQuiz)"
@@ -244,6 +248,7 @@ class QuizViewController: UIViewController {
             parentView.backgroundColor = textLib.vowelScreen.parentViewBackground
         }
         headerLabel.textColor = kHeaderLabelColor
+       
         
     }
         

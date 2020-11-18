@@ -25,6 +25,15 @@ class ShowAllCardViewController: UIViewController {
         var selectedItem: Any?
     
     var gFunction = GlobalFunction()
+    var DivFrameWidth = 2.02
+    var DivFrameHeight = 3
+   
+    
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        super.viewWillTransition(to: size, with: coordinator)
+        getCurrentScreenView()
+        collectionView.reloadData()
+    }
       
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,6 +42,10 @@ class ShowAllCardViewController: UIViewController {
         setTheme()
      }
     
+    override func viewDidAppear(_ animated: Bool) {
+        getCurrentScreenView()
+        collectionView.reloadData()
+    }
      
     @IBAction func goBackToMenu(_ sender: UIButton) {
         gFunction.gotoStoryboardWithIdentifier(quizType: kCurrentScreen , identifier: "SubMenuVC")
@@ -80,18 +93,11 @@ class ShowAllCardViewController: UIViewController {
         }
         
         func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-            // columns
-            var DivFrameWidth = 2.02
-            switch UIDevice.current.userInterfaceIdiom {
-            case .pad:
-                DivFrameWidth = 3.04
-            case .phone,.unspecified,.tv,.carPlay,.mac:
-                DivFrameWidth = 2.02
-            @unknown default:
-                DivFrameWidth = 2.02
-            }
             
-            return CGSize(width: collectionView.frame.width/CGFloat(DivFrameWidth), height: collectionView.frame.height/3)
+            //getCurrentScreenView()
+            //print("FrameWidth : \(DivFrameWidth)   FrameHeight : \(DivFrameHeight)")
+             
+            return CGSize(width: collectionView.frame.width/CGFloat(DivFrameWidth), height: collectionView.frame.height/CGFloat(DivFrameHeight))
         }
         
         private func setTheme(){
@@ -107,6 +113,53 @@ class ShowAllCardViewController: UIViewController {
                 collectionView.backgroundColor = textLib.vowelScreen.parentViewBackground
             }
             headerLabel.textColor = kHeaderLabelColor
+        }
+        
+        
+        private func getCurrentScreenView(){
+            
+            print("** CHECK ORIENTATION")
+            if(UIDevice.current.orientation.isLandscape)
+            {
+                print("** LANDSCAPE")
+            }
+            if(UIDevice.current.orientation.isPortrait)
+            {
+                print("** PORTRAIT")
+            }
+            if(UIDevice.current.orientation.isFlat)
+            {
+                print("** FLAT")
+            }
+            
+            
+            if UIDevice.current.orientation.isLandscape {
+                print("Landscape")
+                switch UIDevice.current.userInterfaceIdiom {
+                case .pad:
+                    DivFrameWidth = 5.04
+                    DivFrameHeight = 2
+                case .phone,.unspecified,.tv,.carPlay,.mac:
+                    DivFrameWidth = 2.02
+                    DivFrameHeight = 3
+                @unknown default:
+                    return
+                }
+            } else {
+                print("Portrait")
+                switch UIDevice.current.userInterfaceIdiom {
+                case .pad:
+                    DivFrameWidth = 4.04
+                    DivFrameHeight = 3
+                case .phone,.unspecified,.tv,.carPlay,.mac:
+                    DivFrameWidth = 2.02
+                    DivFrameHeight = 3
+                @unknown default:
+                    return
+                }
+            }
+            
+             
         }
         
     }

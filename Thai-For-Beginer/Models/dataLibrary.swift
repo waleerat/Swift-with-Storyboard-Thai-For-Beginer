@@ -128,7 +128,7 @@ var vowelRows = [
     ["123","สระอัวะ","Sara ua","uaʔ","ua","","ewe in 'sewer'"],
     ["124","สระอัว","Sara ua","ua","ua","uar","ewe in 'newer'"],
     ["125","สระอำ","Sara am","am","am","um","um in 'sum'"],
-    ["125","สระไอ","Sara ai[e]","ai; aj","ai","ay","i in 'hi'"],
+    ["126","สระไอ","Sara ai[e]","ai; aj","ai","ay","i in 'hi'"],
     ["127","สระไอ","Sara ai[e]","ai; aj","ai","ay","i in 'hi'"],
     ["128","สระเอา","Sara ao[e]","au; aw","ao","aw, au, ow","ow in 'cow'"],
     ["129","ฤ","Rue","rɯ,ri,rɤː","rue, ri, roe","ru, ri","rew in 'grew', ry in 'angry'"],

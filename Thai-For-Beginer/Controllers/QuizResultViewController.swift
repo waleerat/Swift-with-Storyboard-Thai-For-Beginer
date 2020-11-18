@@ -20,6 +20,8 @@ class QuizResultViewController: UIViewController {
     
     @IBOutlet weak var playAgainBnt: UIButton!
     @IBOutlet weak var gotoSubmenuBnt: UIButton!
+     
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()

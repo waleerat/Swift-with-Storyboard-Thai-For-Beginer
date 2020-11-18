@@ -10,8 +10,6 @@ import UIKit
 import AVFoundation
 import SCLAlertView
 
-
-
 class GlobalFunction {
     
     var player: AVAudioPlayer?

@@ -46,9 +46,12 @@ class SettingViewController: UIViewController {
     @IBAction func isCorrectSound(_ sender: UISwitch) {
         let isOn = (sender.isOn) ? true : false
         saveUserDefault(isOn: isOn, setForKey: "isCorrectSound")
+        
+       // saveUserDefault(defaultAudio: "WAKE1", setForKey: "defaultAudio")
     }
     
     @IBAction func setDefaultBntPress(_ sender: UIButton) {
+    
         let isOn = true
         saveUserDefault(isOn: isOn, setForKey: "isAlphabetSound")
         saveUserDefault(isOn: isOn, setForKey: "isVowelSound")
@@ -80,6 +83,7 @@ class SettingViewController: UIViewController {
     
     // MARK: - help
     private func saveUserDefault(isOn: Bool, setForKey: String){
+        //print("Set to -> \(isOn) : \(setForKey) ")
         userDefaults.setValue(isOn , forKey: setForKey)
         userDefaults.synchronize()
     }
@@ -87,6 +91,7 @@ class SettingViewController: UIViewController {
     private func setSwichBnt(swichBnt: UISwitch, setForKey: String){
         var isCorrectSoundOn = true
         if let isCorrectSound = userDefaults.value(forKey: setForKey) {
+            //print("\(isCorrectSound) : \(setForKey) ")
             isCorrectSoundOn = isCorrectSound as! Bool
         } else {
             saveUserDefault(isOn: true , setForKey: setForKey)
@@ -95,7 +100,3 @@ class SettingViewController: UIViewController {
     }
  
 }
-
-
-//userDefaults.removeObject(forKey: kCURRENTUSER)
-//userDefaults.synchronize()
